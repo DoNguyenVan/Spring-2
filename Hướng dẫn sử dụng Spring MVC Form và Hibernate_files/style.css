@@ -1,0 +1,277 @@
+.sprite {
+  background: url('sprite-s61e5f17299.png');
+  position: absolute;
+}
+
+.cta {
+  background-position: 0 0;
+  height: 19px;
+  width: 75px;
+}
+
+.girls-1 {
+  background-position: 0 -21px;
+  height: 50px;
+  width: 120px;
+}
+
+.girls-2 {
+  background-position: 0 -73px;
+  height: 50px;
+  width: 129px;
+}
+
+.light {
+  background-position: 0 -125px;
+  height: 85px;
+  width: 87px;
+}
+
+.line-mask {
+  background-position: 0 -212px;
+  height: 35px;
+  width: 277px;
+}
+
+.line {
+  background-position: 0 -249px;
+  height: 62px;
+  width: 272px;
+}
+
+.logo {
+  background-position: 0 -313px;
+  height: 32px;
+  width: 62px;
+}
+
+.pack-1 {
+  background-position: 0 -347px;
+  height: 107px;
+  width: 192px;
+}
+
+.pack {
+  background-position: 0 -456px;
+  height: 50px;
+  width: 71px;
+}
+
+.text-1 {
+  background-position: 0 -508px;
+  height: 127px;
+  width: 277px;
+}
+
+.text-2 {
+  background-position: 0 -637px;
+  height: 33px;
+  width: 118px;
+}
+
+.text-3 {
+  background-position: 0 -672px;
+  height: 34px;
+  width: 113px;
+}
+
+.text-4 {
+  background-position: 0 -708px;
+  height: 34px;
+  width: 115px;
+}
+
+/**/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  color: #333;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 320px;
+  height: 50px;
+}
+
+#ad {
+  width: 320px;
+  height: 50px;
+}
+#ad.collapsed {
+  width: 320px;
+  height: 50px;
+}
+#ad.expanded {
+  width: 320px;
+  height: 50px;
+}
+
+#banner {
+  width: 318px;
+  height: 48px;
+}
+
+#panel {
+  width: 318px;
+  height: 48px;
+}
+
+/*@include banner-size(300px,250px,rich,500px,250px); */
+/*@include banner-size(300px,600px,rich,600px,600px); */
+/*@include banner-size(728px,90px,rich,728px,250px); */
+#container {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#ad {
+  position: absolute;
+  left: 0;
+  display: block;
+  z-index: 0;
+  background: #fff;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+#ad #overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+}
+#ad #replay {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  display: block;
+  z-index: -1;
+  cursor: pointer;
+  opacity: 0;
+  visibility: none;
+}
+#ad .frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 0;
+}
+#ad .text-1 {
+  top: 75px;
+  left: 15px;
+}
+#ad .line {
+  top: 142px;
+  left: 15px;
+}
+#ad .line-mask {
+  top: 168px;
+  left: 15px;
+}
+#ad .text-2 {
+  top: 10px;
+  left: 78px;
+}
+#ad .text-3 {
+  top: 9px;
+  left: 80px;
+}
+#ad .text-4 {
+  top: 9px;
+  left: 55px;
+}
+#ad .light-1 {
+  left: -22px;
+  top: 138px;
+}
+#ad .light-2 {
+  right: -14px;
+  top: 125px;
+}
+/*#ad .light-3 {
+  left: 575px;
+  bottom: -1px;
+}*/
+#ad .light-4 {
+  left: 240px;
+  bottom: -12px;
+}
+/*#ad .light-5 {
+  left: -2px;
+  bottom: 126px;
+}*//*
+#ad .light-6 {
+  right: 138px;
+  bottom: 7px;
+}*/
+#ad .girls-1 {
+  right: -3px;
+  bottom: 0px;
+}
+#ad .girls-2 {
+  right: 0;
+  bottom: 0px;
+}
+#ad .pack {
+  left: 245px;
+  bottom: -1px;
+}
+#ad .cta {
+  left: 101px;
+  right: 0;
+  margin: auto;
+  bottom: 4px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#ad .cta .glow {
+  background: #fff;
+  background: -webkit-linear-gradient(left, rgba(244, 249, 255, 0), rgba(244, 249, 255, 0.5), rgba(244, 249, 255, 0));
+  background: -moz-linear-gradient(right, rgba(244, 249, 255, 0), rgba(244, 249, 255, 0.5), rgba(244, 249, 255, 0));
+  background: -o-linear-gradient(right, rgba(244, 249, 255, 0), rgba(244, 249, 255, 0.5), rgba(244, 249, 255, 0));
+  background: linear-gradient(to right, rgba(244, 249, 255, 0), rgba(244, 249, 255, 0.5), rgba(244, 249, 255, 0));
+  position: absolute;
+  left: -50px;
+  top: 0;
+  display: block;
+  z-index: 0;
+  width: 50px;
+  height: 100%;
+}
+
+#banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+}

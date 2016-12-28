@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(1)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(2)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(3)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(4)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(5)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/osd.js.download"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/expansion_embed.js.download"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(6)"></script><script async="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/async-ads.js.download"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(7)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(8)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(9)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(10)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(11)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(12)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(13)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(14)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(15)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(16)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(17)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(18)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(19)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(20)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(21)"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ads(22)"></script><script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/get" charset="UTF-8" async=""></script><script type="text/javascript" async="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/getjs.static.js.download"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
+<title>
+Hướng dẫn sử dụng Spring MVC Form và Hibernate
+</title>
+<meta name="Keywords" content="Hướng dẫn sử dụng Spring MVC Form và Hibernate">
+<meta name="Description" content="Hướng dẫn sử dụng Spring MVC Form và Hibernate">
+<meta property="og:site_name" content="o7planning.org">
+<link rel="image_src" href="http://o7planning.org/templates/o7planning/resources/icons/triceratops.png">
+<meta name="admicro-site-verification" content="b7a01643ecdaeec15c7faf75542baabd">
+<meta property="og:image" content="http://o7planning.org/templates/o7planning/resources/icons/triceratops.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="849">
+<meta property="og:image:height" content="540">
+<link rel="image_src" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/triceratops.png">
+<link rel="shortcut icon" href="http://o7planning.org/templates/o7planning2/resources/images/favi.png" type="image/png">
+
+
+
+
+<script type="text/javascript" async="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/cse.js.download"></script><script async="" type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/gpt.js.download"></script><script type="text/javascript" async="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ga.js.download"></script><script>
+var CHECK_LOGINED_URL = "http://o7planning.org/ajax/vi/check-logined-third-user";
+var LOGIN_URL = "/vi/login";
+</script>
+
+
+
+
+<!-- Global Resource (SSR) resources/libs/owl-carousel/owl.carousel.css -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/owl.carousel.css">
+
+
+<!-- Global Resource (SSR) resources/libs/owl-carousel/owl.theme.css -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/owl.theme.css">
+
+
+<!-- Global Resource (SSR) resources/libs/syntaxhighlighter/syntaxhighlighter.css -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/syntaxhighlighter.css">
+
+
+<!-- Global Resource (SSR) resources/libs/syntaxhighlighter/syntaxhighlighter-override.css -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/syntaxhighlighter-override.css">
+
+
+<!-- Global Resource (SSR) resources/libs/syntaxhighlighter/syntaxhighlighter-extends.css -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/syntaxhighlighter-extends.css">
+
+
+<!-- Global Resource (SSR) resources/libs/cssmenu/cssmenu-styles.css -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/cssmenu-styles.css">
+
+
+<!-- Global Resource (SSR) 1 - resources/libs/jquery-1.11.2.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/jquery-1.11.2.js.download"></script>
+
+
+<!-- Global Resource (SSR) 2 - resources/libs/sharebuttons/jquery.csbuttons.min.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/jquery.csbuttons.min.js.download"></script>
+
+
+<!-- Global Resource (SSR) 3 - resources/libs/ckeditor/ckeditor.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ckeditor.js.download"></script><style>.cke{visibility:hidden;}</style>
+
+
+<!-- Global Resource (SSR) 4 - resources/libs/ckeditor/adapters/jquery-adapter.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/jquery-adapter.js.download"></script>
+
+
+<!-- Global Resource (SSR) 5 - resources/libs/owl-carousel/owl.carousel.min.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/owl.carousel.min.js.download"></script>
+
+
+<!-- Global Resource (SSR) 7 - resources/libs/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/highlight.pack.js.download"></script>
+
+
+<!-- Global Resource (SSR) 10 - resources/libs/syntaxhighlighter/syntaxhighlighter.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/syntaxhighlighter.js.download"></script>
+
+
+<!-- Global Resource (SSR) 12 - resources/global.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/global.js.download"></script>
+
+
+<!-- Global Resource (SSR) 20 - resources/libs/cssmenu/cssmenu-script.js -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/cssmenu-script.js.download"></script>
+
+
+<!-- Global Style file -->
+<link rel="stylesheet" type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/1320252.css">
+
+
+<!-- Global Javascript file -->
+<script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/1320252.js.download"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script language="javascript" type="text/javascript">
+function resizeIframe(obj) { obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px'; }
+</script>
+
+
+<!-- Ezoic Code  -->
+<script>var ezoicId = 22529;</script>
+
+
+
+<!--   Ezoic Code -->
+
+
+<!-- Ezoic Ad Testing Code-->
+
+<!-- Ezoic Ad Testing Code-->
+
+
+<style>
+	.ezmob-footer {
+	    position: fixed; left: 0px; bottom: 0px; height: 50px; width: 100%; background: white; z-index: 1000;
+	}
+    body {
+        padding-bottom: 50px;
+    }
+</style>
+<style>.ezoic-ad.leader-1 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px; }
+.ezoic-ad.leader-2 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px; }
+.ezoic-ad.medrectangle-1 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px; }
+.ezoic-ad.banner-1 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:80px;min-width:468px; }
+.ezoic-ad.nativesingle-1 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:240px;min-width:100%; }
+.ezoic-ad{display:inline-block;}
+.ezoic-floating-bottom { display: none!important; }</style><link rel="canonical" href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate">
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-78247107-43";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-78247107-43']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'o7planning.org']);
+_gaq.push(['f._setDomainName', 'o7planning.org']);
+_gaq.push(['e._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['e._setCustomVar',2,'t','134',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod1',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['f._setCustomVar',2,'domain','o7planning.org',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+_gaq.push(['_setAccount', 'UA-50431663-1']);
+_gaq.push(['_setDomainName', 'o7planning.org']);
+_gaq.push(['_trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+var ez_tos_track_count = 0;
+var ez_last_activity_count = 0;
+(function (__ez_tos) {
+  window.setInterval(function () {
+    __ez_tos = (function (t) {
+      return t[0] == 45 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 15);
+    })(__ez_tos.split(':').reverse());
+
+    ez_tos_track_count++;
+    if(ez_tos_track_count > 1 && ez_tos_track_count < (ez_last_activity_count + 4) && ez_tos_track_count < 240)
+    {
+        if(window.pageTracker)
+        {
+            pageTracker._trackEvent('Time', 'Log', __ez_tos);
+			new EzoicAnalytics().storeImpression();
+        }
+        else
+        {
+           _gaq.push(['e._trackEvent', 'Time', 'Log', __ez_tos]);
+           _gaq.push(['f._trackEvent', 'Time', 'Log', __ez_tos]);
+		   new EzoicAnalytics().storeImpression();
+        }
+
+		if(typeof(_paq) != 'undefined')
+        {
+            _paq.push(['trackEvent', 'Time', __ez_tos, 'TimeOnPage']);
+        }
+
+    }
+  }, 15000);
+})('00');
+
+</script>
+<script type="text/javascript">var ezouid = "594868884";</script><!--<base href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate">--><base href="."><!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+<!--[if (gte IE 9) | (!IE)]><!-->
+    <script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/jquery.min.js.download"></script>
+<!--<![endif]--><script type="text/javascript">
+var ezoTemplate = 'pub_site';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script>
+
+<script>
+var old_jquery = null;
+var old_jquery_sign = null;
+function open_jquery_wrapper()
+{
+    if(typeof $ezJQuery != 'undefined')
+    {
+        old_jquery = jQuery;
+        old_jquery_sign = $;
+        $ = $ezJQuery;
+        jQuery = $ezJQuery;
+    }
+}
+function close_jquery_wrapper()
+{
+    if(typeof $ezJQuery != 'undefined')
+    {
+        $ = old_jquery_sign;
+        jQuery = old_jquery;
+    }
+}
+</script>
+
+<!-- START EZHEAD -->
+<script type="text/javascript">
+var soc_app_id = '0';
+var did = 22529;
+var ezdomain = 'o7planning.org';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ezjquery-noconflict.js.download"></script>
+
+
+
+
+
+
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+function ez_isclean( data ) {
+    if (typeof data === 'undefined') { data = document.URL; }
+    var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))(@|%2540|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    var isClean = !re.test(data);
+    return isClean;
+}
+
+var ez_queue = new Array();
+function sort_queue(a, b)
+{
+  if( a.priority < b.priority ) return -1;
+  else if( a.priority == b.priority ) return 0;
+  else return 1;
+}
+function execute_ez_queue()
+{
+  ez_queue.sort( sort_queue );
+
+  for( var i in ez_queue )
+  {
+        if(typeof ez_queue[i].method != "undefined")
+        {
+            try{
+                ez_queue[i].method.call( null );
+            }
+            catch (err) {
+
+            }
+        }
+  }
+}
+
+var ez_ad_units = new Array();
+var ezslots = new Array();
+function ez_write_tag(d) {
+    if(ez_isclean() && d instanceof Array) {
+
+		ez_ad_units[ez_ad_units.length] = d;
+        var ezcmd = "googletag.cmd.push(function() {var divid = 'div-gpt-ad-"+d[1]+"-0';if(typeof ezlrarn == 'function'){ezlrarn(divid);}googletag.display(divid);var to = 0;if("+d[2]+".getTargeting('ga')[0] == '0'){to = 500;console.log('"+d[2]+" - no google');}if(window.ezDisableInitialLoad==true){setTimeout(function(){googletag.pubads().refresh(["+d[2]+"])},to);}});";
+		return ezcmd;
+    }
+    else {
+        return "1+1";
+    }
+}
+function in_array(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+</script><script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">var ezrpos = new Array();var ez_current_interval;var ez_current_load = 0;</script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/epbfull4.js.download" async=""></script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer="">
+function epbjsRefreshSlot(e){epbjs.que.push(function(){epbjs.requestBids({adUnitCodes:[e.getSlotElementId()],bidsBackHandler:function(){epbjs.setTargetingForGPTAsync([e.getSlotElementId()])}})})}var epbjs=epbjs||{};epbjs.useAdj=true,epbjs.que=epbjs.que||[],epbjs.ezdss=epbjs.ezdss||[],epbjs.ezobid=epbjs.ezobid||[],epbjs.que.push(function(){var e=[{code: 'div-gpt-ad-o7planning_org-leader-1-0', sizes: [[728, 90]], bids: [{bidder: 'pulsepoint', params: { cf: '728X90', cp: 560269, ct: 472601 }}]},{code: 'div-gpt-ad-o7planning_org-leader-2-0', sizes: [[728, 90]], bids: [{bidder: 'pulsepoint', params: { cf: '728X90', cp: 560269, ct: 472601 }}]},{code: 'div-gpt-ad-o7planning_org-medrectangle-1-0', sizes: [[300, 250]], bids: [{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }}]},{code: 'div-gpt-ad-o7planning_org-banner-1-0', sizes: [[468, 60]], bids: []}];epbjs.addAdUnits(e);epbjs.SS={"pulsepoint":10019},epbjs.bidderSettings={pulsepoint: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.720000; var adj2 = adj1 * 1.400000; return adj2; }},standard:{adserverTargeting:[{key:"hb_bidder",val:function(e){return e.bidderCode}},{key:"hb_adid",val:function(e){return e.adId}},{key:"hb_pb",val:function(e){var s=e.cpm;return 5>s?(Math.floor(100*s)/100).toFixed(2):(Math.floor(10*s)/10).toFixed(2)}},{key:"hb_ssid",val:function(e){return"ehb"==e.bidder?0:"undefined"!=typeof epbjs.SS[e.bidder]?epbjs.SS[e.bidder]:(console.error("epbjs: NO MATCH"),0)}}]}},epbjs.onEvent("bidWon",function(e){"ehb"==e.bidder?epbjs.ezdss[e.adUnitCode]=e.ss:"undefined"!=typeof epbjs.SS[e.bidder]?(epbjs.ezdss[e.adUnitCode]=epbjs.SS[e.bidder],1==epbjs.useAdj&&["sovrn","openx","pulsepoint","defymedia","aol","conversant","districtm","admedia","brealtime"].indexOf(e.bidder)>-1&&(epbjs.ezobid[e.adUnitCode]=e.cpm/1.400000)):console.error("epbjs: NO MATCH")}),epbjs.requestBids({bidsBackHandler:function(e){epbjs.setTargetingForGPTAsync()}})});
+</script><script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">window.isEZABL=false;window.ezmadspc=300;</script><script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">window.ezDisableInitialLoad=false;</script><script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+
+
+
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+googletag.cmd.push(function() {if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslot_0 = googletag.defineSlot('/1254144/o7planning_org-leader-1',[728,90],'div-gpt-ad-o7planning_org-leader-1-0').addService(googletag.pubads()).setTargeting('iid20','1967001').setTargeting('t','134').setTargeting('d','22529').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1109').setTargeting('sap','1109').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','5').setTargeting('al','1030').setTargeting('compid','0').setTargeting('tap','o7planning_org-leader-1-1967001').setTargeting('bv','2').setCollapseEmptyDiv(false).setTargeting('br1','1400').setTargeting('br2','700');ezslot_0.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[0]="0";ezslot_1 = googletag.defineSlot('/1254144/o7planning_org-leader-2',[728,90],'div-gpt-ad-o7planning_org-leader-2-0').addService(googletag.pubads()).setTargeting('iid5','493001').setTargeting('t','134').setTargeting('d','22529').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1104').setTargeting('sap','1104').setTargeting('a','|254|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','6').setTargeting('al','1003').setTargeting('compid','0').setTargeting('tap','o7planning_org-leader-2-493001').setTargeting('bv','2').setCollapseEmptyDiv(false).setTargeting('br1','800').setTargeting('br2','400');ezslot_1.set('adsense_ad_types','text_image').set('adsense_background_color','001DAD').set('adsense_border_color','001DAD').set('adsense_link_color','FFFFFF').set('adsense_text_color','FFFFFF').set('adsense_url_color','EEFF00');ezrpos[1]="1";ezslot_2 = googletag.defineSlot('/1254144/o7planning_org-medrectangle-1',[300,250],'div-gpt-ad-o7planning_org-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid18','1746501').setTargeting('t','134').setTargeting('d','22529').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1108').setTargeting('sap','1108').setTargeting('a','|251|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','1').setTargeting('al','1000').setTargeting('compid','0').setTargeting('tap','o7planning_org-medrectangle-1-1746501').setTargeting('bv','2').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','450').setTargeting('br2','220');ezslot_2.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0C9C11').set('adsense_text_color','000000').set('adsense_url_color','0C9C11');ezrpos[2]="2";ezslot_3 = googletag.defineSlot('/1254144/o7planning_org-banner-1',[468,60],'div-gpt-ad-o7planning_org-banner-1-0').addService(googletag.pubads()).setTargeting('iid2','132001').setTargeting('t','134').setTargeting('d','22529').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1105').setTargeting('sap','1105').setTargeting('a','|251|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','7').setTargeting('al','1001').setTargeting('compid','0').setTargeting('tap','o7planning_org-banner-1-132001').setTargeting('bv','2').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','120').setTargeting('br2','60');ezslot_3.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0C9C11').set('adsense_text_color','000000').set('adsense_url_color','0C9C11');ezrpos[3]="3";}else{window.ezHideLocations=[];window.ezHideLocations.push('div-gpt-ad-o7planning_org-leader-1-0');window.ezHideLocations.push('div-gpt-ad-o7planning_org-leader-2-0');ezslot_2 = googletag.defineSlot('/1254144/o7planning_org-medrectangle-1',[300,250],'div-gpt-ad-o7planning_org-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid18','1746501').setTargeting('t','134').setTargeting('d','22529').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1108').setTargeting('sap','1108').setTargeting('a','|251|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','1').setTargeting('al','1000').setTargeting('compid','0').setTargeting('tap','o7planning_org-medrectangle-1-1746501').setTargeting('bv','2').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','450').setTargeting('br2','220');ezslot_2.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0C9C11').set('adsense_text_color','000000').set('adsense_url_color','0C9C11');ezrpos[2]="2";ezslot_3 = googletag.defineSlot('/1254144/o7planning_org-banner-1',[468,60],'div-gpt-ad-o7planning_org-banner-1-0').addService(googletag.pubads()).setTargeting('iid2','132001').setTargeting('t','134').setTargeting('d','22529').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1105').setTargeting('sap','1105').setTargeting('a','|251|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','7').setTargeting('al','1001').setTargeting('compid','0').setTargeting('tap','o7planning_org-banner-1-132001').setTargeting('bv','2').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','120').setTargeting('br2','60');ezslot_3.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0C9C11').set('adsense_text_color','000000').set('adsense_url_color','0C9C11');ezrpos[3]="3";}googletag.pubads().addEventListener('slotRenderEnded', function(event) { if (typeof ezbanger == 'function') { ezbanger(event);}});googletag.pubads().addEventListener('impressionViewable', function(event) { if (typeof ezvb == 'function') { ezvb(event);}});googletag.pubads().addEventListener('slotVisibilityChanged', function(event) { if (typeof ezvbc == 'function') { ezvbc(event);}});googletag.enableServices();});if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslots.push("ezslot_0");ezslots.push("ezslot_1");ezslots.push("ezslot_2");ezslots.push("ezslot_3");}else{ezslots.push("ezslot_2");ezslots.push("ezslot_3");}</script>
+<script type="text/javascript" cf-async="false">var _ezaq = {"ab_test_id":"mod1","ab_test_val":"","ad_location_ids":"30,3,0,1,93","adgroup_rank_id":-1,"adx_ad_count":4,"country":"VN","device_height":616,"device_width":1185,"domain_id":22529,"forensiq_score":-1,"form_factor_id":1,"has_bad_words":0,"ip":"14.174.42.68","landing_page_url":"http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate","max_ads":10,"page_ad_positions":"1104,1105,1106,1108,1109","page_view_count":0,"page_view_id":"9c1bf014-15e8-41b4-6b35-f261aac60017","pv_event_count":0,"referrer_id":0,"region":"ap-southeast-1","serverid":"52.221.246.123:4806","sub_page_ad_positions":"1104,1105,1106,1108,1109","t_epoch":1482962034,"template_id":134,"url":"http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate","user_agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36","user_id":594868884,"visit_id":1987684886,"visit_uuid":"090d9d7c-f20a-4df5-530f-ee22e8fd3a9e","word_count":2963};var _ezim_d = {"o7planning_org-banner-1":{"adx_ad_count":4,"full_id":"o7planning_org-banner-1/2016-12-28/132001","height":"60","position_id":1105,"sub_position_id":1105,"width":"468"},"o7planning_org-leader-1":{"adx_ad_count":4,"full_id":"o7planning_org-leader-1/2016-12-28/1967001","height":"90","position_id":1109,"sub_position_id":1109,"width":"728"},"o7planning_org-leader-2":{"adx_ad_count":4,"full_id":"o7planning_org-leader-2/2016-12-28/493001","height":"90","position_id":1104,"sub_position_id":1104,"width":"728"},"o7planning_org-medrectangle-1":{"adx_ad_count":4,"full_id":"o7planning_org-medrectangle-1/2016-12-28/1746501","height":"250","position_id":1108,"sub_position_id":1108,"width":"300"},"o7planning_org-nativesingle-1":{"adx_ad_count":4,"full_id":"o7planning_org-nativesingle-1/2016-12-28/1242001","height":"240","position_id":1106,"sub_position_id":1106,"width":"100"}};var _ezat = {"domain_id":22529,"form_factor_id":1,"pageview_date":"2016-12-28","pageview_id":"9c1bf014-15e8-41b4-6b35-f261aac60017","template_id":134,"url":"http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate","visit_uuid":"090d9d7c-f20a-4df5-530f-ee22e8fd3a9e"};</script><script data-cfasync="false" type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/imp2.js.download"></script><script data-pagespeed-no-defer="" data-cfasync="false" type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/banger.js.download"></script><script data-pagespeed-no-defer="" data-cfasync="false" type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ezosuigeneris.js.download"></script><script data-pagespeed-no-defer="" data-cfasync="false" type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/ezosuigenerisc.js.download"></script><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/pubads_impl_107.js.download" async=""></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-5/html/container.html"><style type="text/css">.ob-tcolor{color:#555} .ob-lcolor{color:rgb(0, 0, 238)} .ob-bgtcolor{background-color:#555} .item-link-container:hover .ob-tcolor{border-color:#555} </style><script src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/jsapi" type="text/javascript"></script><link type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/default+en.css" rel="stylesheet"><link type="text/css" href="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/default.css" rel="stylesheet"><script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/default+en.I.js.download"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #666666;
+background-color: #CECECE;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #E9E9E9;
+background-color: #E9E9E9;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #FF9900;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #FF9900;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #0000CC;
+}
+.gsc-cursor-page {
+color: #0000CC;
+}
+a.gsc-trailing-more-results:link {
+color: #0000CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #000000;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #E9E9E9;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #FF9900;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #336699;
+background-color: #FFFFFF;
+}
+.gsc-completion-title {
+color: #0000CC;
+}
+.gsc-completion-snippet {
+color: #000000;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #0000CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #000000;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #008000;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body style="">
+ 
+<div id="header-container">
+
+ <!-- HEADER (start) TemplateFragmentId=1320304 -->
+<div class="inner-wrapper">
+<div id="o7planning">
+<span>
+<a href="http://o7planning.org/">
+  <img height="55" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/triceratops.png">
+</a>
+</span>
+<span id="site-name">o7planning</span>
+</div>
+<div id="header-right-bar">
+<div class="search">
+<script>
+(function() {
+var cx = '005176779322695717178:c1vrozdqdci';
+var gcse = document.createElement('script');
+gcse.type = 'text/javascript';
+gcse.async = true;
+gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 " style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none; background: url(&quot;http://www.google.com/cse/static/en/google_custom_search_watermark.gif&quot;) left center no-repeat rgb(255, 255, 255);"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="image" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="search"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/small-logo.png" class="gsc-branding-img"></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div class="gsc-results-close-btn" tabindex="0"></div><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellspacing="0" cellpadding="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result">&nbsp;</div><div class="gsc-result-selector gsc-more-results" title="show more results">&nbsp;</div><div class="gsc-result-selector gsc-all-results" title="show all results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div class="gsc-modal-background-image" tabindex="0"></div></div></div></div>
+</div>
+<style>
+.gsc-control-cse  {
+background-color : inherit;
+font-family: inherit;
+
+}
+
+.cse .gsc-control-cse, .gsc-control-cse {
+background-color : inherit;
+border: none;
+}
+
+.cse .gsc-control-cse, .gsc-control-cse {
+margin-top :-5px;
+padding: 0px;
+width: 250px;
+}
+</style>
+<div class="languages">
+
+ <img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/Vietnamese.png" height="20">
+
+<a href="http://o7planning.org/">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/English.png" height="20">
+</a>
+
+</div>
+<div class="logined-user">
+</div>
+<div style="clear:both;"></div>
+<div style="float:right; color:white;margin-top:10px;">
+  Liên hệ quảng cáo: o7planning@gmail.com
+</div>
+</div>
+</div>
+<!-- HEADER (end) TemplateFragmentId=1320304 -->
+
+</div>
+<div class="menu-container">
+
+ <!-- HORIZONTAL_MENU (start) TemplateFragmentId=1320563 -->
+<!-- MARCRO START -->
+<!-- MARCRO END -->
+<div id="cssmenu" class="inner-wrapper"><div id="menu-button">Menu</div>
+ <ul>
+        <li>
+  <a href="http://o7planning.org/vi">Tất cả tài liệu</a>
+  </li>
+        <li class="has-sub"><span class="submenu-button"></span>
+  <a href="javascript:void(0)" style="cursor:default;">Java</a>
+   <ul>
+        <li>
+  <a href="http://o7planning.org/vi/10973/java-co-ban">Java cơ bản</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10985/java-nang-cao">Java nâng cao</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10979/java-servlet-jsp">Java Servlet/Jsp</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10957/maven">Maven</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11239/gradle">Gradle</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10969/hibernate-framework">Hibernate</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10961/struts2-framework">Struts2 Framework</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10959/spring-framework">Spring Framework</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11201/java-web-service">Java Web Service</a>
+  </li>
+        <li class="has-sub"><span class="submenu-button"></span>
+  <a href="http://o7planning.org/vi/10981/cong-nghe-cua-eclipse">Công nghệ của Eclipse</a>
+   <ul>
+        <li>
+  <a href="http://o7planning.org/vi/11119/lap-trinh-java-swt">SWT</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10953/eclipse-rcp">Eclipse RCP</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10955/eclipse-rap">Eclipse RAP</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10943/eclipse-plugin-tools">Eclipse Plugin Tools</a>
+  </li>
+     </ul>
+ </li>
+        <li>
+  <a href="http://o7planning.org/vi/10983/java-api-cho-html-xml">Java API cho HTML &amp; XML</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11005/cac-thu-vien-ma-nguon-mo-java">Các thư viện mã nguồn mở Java</a>
+  </li>
+     </ul>
+ </li>
+        <li>
+  <a href="http://o7planning.org/vi/11009/lap-trinh-javafx">JavaFX</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11119/lap-trinh-java-swt">SWT</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11007/lap-trinh-android">Android</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11015/lap-trinh-swift">Swift</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10999/lap-trinh-csharp">C#</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10995/lap-trinh-c-cpp">C/C++</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11013/lap-trinh-ruby">Ruby</a>
+  </li>
+        <li class="has-sub"><span class="submenu-button"></span>
+  <a href="javascript:void(0)" style="cursor:default;">Database</a>
+   <ul>
+        <li>
+  <a href="http://o7planning.org/vi/10977/co-so-du-lieu-oracle">Cơ sở dữ liệu Oracle</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11003/cong-nghe-cua-oracle">Công nghệ của Oracle</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10989/co-so-du-lieu-mysql">Cơ sở dữ liệu MySQL</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10991/co-so-du-lieu-sql-server">Cơ sở dữ liệu SQL Server</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/10993/co-so-du-lieu-khac">Cơ sở dữ liệu khác</a>
+  </li>
+     </ul>
+ </li>
+        <li>
+  <a href="http://o7planning.org/vi/10987/lap-trinh-bao-cao">Report</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11001/lap-trinh-phia-client">Client</a>
+  </li>
+        <li class="has-sub"><span class="submenu-button"></span>
+  <a href="javascript:void(0)" style="cursor:default;">Khác</a>
+   <ul>
+        <li>
+  <a href="http://o7planning.org/vi/10975/chua-phan-loai">Chưa phân loại</a>
+  </li>
+        <li>
+  <a href="http://o7planning.org/vi/11011/phan-mem-va-ung-dung-tien-ich">Phần mềm và ứng dụng tiện ích</a>
+  </li>
+     </ul>
+ </li>
+     
+        <li>
+       <a target="_blank" href="http://freetuts.net/">PHP</a>
+    </li>
+    <li>
+       <a href="http://o7planning.org/web/fe/default/vi/recruitment-category/1929164/tuyen-dung">Tuyển dụng</a>
+    </li>
+     </ul>
+</div>
+<!-- HORIZONTAL_MENU (end) TemplateFragmentId=1320563 -->
+
+</div>
+<div class="body-container">
+<section id="section">
+<div class="inner-wrapper">
+
+ <!-- BODY (start) TemplateFragmentId=1320166 -->
+
+ <!-- CONTENT-FORMAT (start) TemplateFragmentId=1321156 -->
+<!-- CONTENT-FORMAT (end) TemplateFragmentId=1321156 -->
+  
+ <!-- ITEM_SCRIPT : No TemplateFragment -->
+
+ <!-- ITEM-STYLE (start) TemplateFragmentId=1321051 -->
+
+<style>
+
+
+
+</style>
+<!-- ITEM-STYLE (end) TemplateFragmentId=1321051 -->
+
+<div style="clear:both;"></div>
+<div class="top-of-body">
+  
+ <!-- TOP_OF_BODY (start) TemplateFragmentId=1321280 -->
+<div class="top-ad-container">
+   <div style="overflow:hidden;">
+                                   <div style="clear:both;"></div>
+<a href="http://bis-smart.com/" target="_blank">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/click.jpg">
+</a>
+                         </div>
+</div>
+<!-- TOP_OF_BODY (end) TemplateFragmentId=1321280 -->
+
+</div>
+<div style="clear:both;"></div>
+<div class="left" id="main" role="main">
+  
+ <!-- CENTER_OF_BODY (start) TemplateFragmentId=1321265 -->
+<div id="style-switcher" style="right: 0px;" class="">
+<div id="style-switcher-panel">
+<h3>Quick Link</h3>
+<div class="item-toc-data">
+   <div class="content-toc-container">
+
+<a name="top"> </a>
+<dl>
+<dt>
+1- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2563862">Giới thiệu</a>
+</dt>
+<dt>
+2- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564793">Chuẩn bị database</a>
+</dt>
+<dt>
+3- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2563890">Tạo Project</a>
+</dt>
+<dt>
+4- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564007">Cấu hình Web.xml &amp; Maven</a>
+</dt>
+<dt>
+5- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564073">Cấu hình Spring MVC</a>
+</dt>
+<dt>
+6- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564366">Các file class tham gia vào ví dụ</a>
+</dt>
+<dt>
+7- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564459">Spring MVC Validator</a>
+</dt>
+<dt>
+8- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564452">Spring Controller</a>
+</dt>
+<dt>
+9- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564612">Các file Jsps</a>
+</dt>
+<dt>
+10- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564661">Chạy ứng dụng</a>
+</dt>
+</dl>
+
+</div>
+
+</div>
+<div id="style-switcher-toggle" class="on">
+</div>
+</div>
+</div>
+<div class="item-title">
+Hướng dẫn sử dụng Spring MVC Form và Hibernate
+</div>
+<div style="clear: both;"></div>
+<div class="item-toc-data">
+<div class="content-toc-container">
+
+<a name="top"> </a>
+<dl>
+<dt>
+1- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2563862">Giới thiệu</a>
+</dt>
+<dt>
+2- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564793">Chuẩn bị database</a>
+</dt>
+<dt>
+3- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2563890">Tạo Project</a>
+</dt>
+<dt>
+4- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564007">Cấu hình Web.xml &amp; Maven</a>
+</dt>
+<dt>
+5- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564073">Cấu hình Spring MVC</a>
+</dt>
+<dt>
+6- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564366">Các file class tham gia vào ví dụ</a>
+</dt>
+<dt>
+7- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564459">Spring MVC Validator</a>
+</dt>
+<dt>
+8- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564452">Spring Controller</a>
+</dt>
+<dt>
+9- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564612">Các file Jsps</a>
+</dt>
+<dt>
+10- <a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#a2564661">Chạy ứng dụng</a>
+</dt>
+</dl>
+
+</div>
+
+</div>
+<div style="clear: both;"></div>
+ <!-- DRAFT_SITE : Disabled -->
+
+ <!-- ALERT (start) TemplateFragmentId=2462714 -->
+
+
+<div style="border: 1px solid #ff9249; padding: 10px 5px 5px 5px; margin: 20px 0px 5px 0px;">
+<a target="_blank" href="http://o7planning.org/vi/11139/cong-ty-vinh-cuu-tuyen-dung-lap-trinh-vien-java">Công ty Vĩnh Cửu tuyển dụng lập trình viên Java</a>
+</div>
+
+
+<!-- ALERT (end) TemplateFragmentId=2462714 -->
+
+<div style="clear: both;"></div>
+<div style="margin:20px 0px;">
+<a target="_blank" href="http://viettimes.vn/viet-nam/doi-song/hai-phong-dua-khuyen-nghi-khong-dung-may-tinh-do-lenovo-san-xuat-31667.html">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/lenovo.png">
+</a>
+</div>
+<div style="clear: both;"></div>
+<div class="item-data">
+<div class="content-content-container"> 
+ <dl> 
+  <dt class="content-toc">
+   <h1><a name="a2563862"></a>1- Giới thiệu </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2563862"></div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Tài liệu được viết dựa trên: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li> <h3>Spring MVC 4.2.5</h3> </li> 
+     <li> <h3>Hibernate 5.x</h3> </li> 
+     <li> <h3>Database: Oracle, MySQL, SQL Server</h3> </li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Xem trước ví dụ: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564862.gif"> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564793"></a>2- Chuẩn bị database </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564793">
+    <!-- Ezoic - All-2 - mid_content --> 
+    <span id="ezoic-pub-ad-placeholder-105"></span><span style="display: inline-block; float: none; min-height: 50px; min-width: 320px; margin: 2px 0px !important;" class="ezoic-ad banner-1 adtester-container adtester-container-105"><span id="div-gpt-ad-o7planning_org-banner-1-0" ezaw="468" ezah="60" style="position: relative; z-index: 0; min-height: 50px; min-width: 320px;" class="ezoic-ad ezfound" data-google-query-id="CNGfy5fwl9ECFQ-paAodIigF9w"><!--script-placeholder--><div id="google_ads_iframe_/1254144/o7planning_org-banner-1_0__container__" style="border: 0pt none; display: inline-block; width: 320px; height: 50px;"><iframe frameborder="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/container.html" id="google_ads_iframe_/1254144/o7planning_org-banner-1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="320" height="50" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></span></span><script>var ezzns1 = {1.10:505275,1.40:505278,2.60:505287,0.05:504900,0.25:504904,0.90:504913,9.50:512973,0.30:504905,0.70:504911,12.50:512987,9.00:512971,7.00:512964,12.00:512984,2.00:505284,11.00:512980,14.00:512993,0.60:504910,1.00:505274,6.50:512962,10.50:512978,0.80:504912,14.50:512995,8.00:512967,0.10:504901,1.30:505277,7.50:512965,8.50:512970,1.90:505283,10.00:512975,0.20:504903,1.60:505280,11.50:512981,13.50:512991,2.40:505286,0.40:504907,1.20:505276,4.00:505291,4.50:505292,5.50:512958,0.50:504909,2.20:505285,15.00:512996,6.00:512960,0.35:504906,1.70:505281,13.00:512989,3.50:505290,1.80:505282,5.00:505293,0.15:504902,2.80:505288,1.50:505279,3.00:505289,0.45:504908,};</script><script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/publishertag.js.download"></script>
+<div class="ezflad-47" style="display:inline-block" adunitname="o7planning_org-banner-1" id="crt-1">
+<script type="text/javascript">
+var ezoflbf_2_1 = function() {IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.ReloadFromP(1105);};
+var ezoflbf_1 = function() { eval(ez_write_tag([[468,60],'o7planning_org-banner-1','ezslot_3']));
+		};</script><script type="text/javascript">
+Criteo.DisplayAd({
+    zoneid: 504909, containerid: 'crt-1', passbackcode: ezoflbf_1
+});
+</script><iframe id="cto_iframe_c5069aecf2" frameborder="0" allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" scrolling="no" vspace="0" width="0px" height="0px" style="display:none;" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/saved_resource.html"></iframe></div><script type="text/javascript">setTimeout(function(){if(typeof IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL == 'object') {
+			var ezflaun = IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.GetNameFromPositionId(1105);
+				if(typeof ezflaun != 'undefined' && ezflaun.length > 0) {
+				if(typeof ez_ad_units != undefined) {
+					for(i=0;i<ez_ad_units.length;i++){
+
+						if(ezflaun.indexOf(ez_ad_units[i][1]) >= 0) {
+							return false;
+						}
+					}
+				}
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.StoreStatSource(ezflaun, 47, 0.50);
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.RemoveSlotById(ezflaun);
+			}
+
+		}}, 4000);</script><!--ezoicfl--> 
+    <!-- End Ezoic - All-2 - mid_content -->
+   </div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-text-sql"> 
+    <div class="df-file-name">
+     ORACLE
+    </div> 
+    <pre class="brush: sql;">-- Create table
+create table APPLICANTS
+(
+  ID       VARCHAR2(50) not null,
+  GENDER   VARCHAR2(10) not null,
+  NAME     VARCHAR2(50) not null,
+  POSITION VARCHAR2(50) not null,
+  SKILLS   VARCHAR2(255) not null,
+  EMAIL    VARCHAR2(50) not null
+) ;
+
+alter table APPLICANTS
+  add constraint APPLICANT_PK primary key (ID);
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-sql"> 
+    <div class="df-file-name">
+     MYSQL &amp; SQL SERVER
+    </div> 
+    <pre class="brush: sql;">-- Create table
+create table APPLICANTS
+(
+  ID       VARCHAR(50) not null,
+  GENDER   VARCHAR(10) not null,
+  NAME     VARCHAR(50) not null,
+  POSITION VARCHAR(50) not null,
+  SKILLS   VARCHAR(255) not null,
+  EMAIL    VARCHAR(50) not null,
+  primary key (ID)
+) ;
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2563890"></a>3- Tạo Project </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2563890">
+    <!-- Ezoic - AdTest_300x250(1) - sidebar --> 
+    <span id="ezoic-pub-ad-placeholder-104"></span><span style="display: inline-block; float: none; min-height: 90px; min-width: 728px; margin: 2px 0px !important;" class="ezoic-ad leader-2 adtester-container adtester-container-104"><span id="div-gpt-ad-o7planning_org-leader-2-0" ezaw="728" ezah="90" style="position: relative; z-index: 0; min-height: 90px; min-width: 728px;" class="ezoic-ad ezfound" data-google-query-id="CI-ry5fwl9ECFYyoaAodqTAP3Q"><!--script-placeholder--><div id="google_ads_iframe_/1254144/o7planning_org-leader-2_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/container(1).html" id="google_ads_iframe_/1254144/o7planning_org-leader-2_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></span></span><script>var ezzns3 = {1.20:504708,0.05:504692,0.40:504699,2.80:504721,0.60:504702,0.80:504704,3.50:504724,0.30:504697,0.35:504698,1.50:504711,5.00:504727,0.20:504695,0.50:504701,4.00:504725,1.40:504710,1.90:504715,2.20:504718,3.00:504722,0.45:504700,1.80:504714,0.90:504705,1.00:504706,1.30:504709,1.70:504713,2.00:504716,0.15:504694,0.70:504703,1.10:504707,1.60:504712,2.40:504719,2.60:504720,4.50:504726,0.10:504693,0.25:504696,};</script><script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/publishertag.js.download"></script>
+<div class="ezflad-47" style="display:inline-block" adunitname="o7planning_org-leader-2" id="crt-3">
+<script type="text/javascript">
+var ezoflbf_2_3 = function() {IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.ReloadFromP(1104);};
+var ezoflbf_3 = function() { eval(ez_write_tag([[728,90],'o7planning_org-leader-2','ezslot_1']));
+		};</script><script type="text/javascript">
+Criteo.DisplayAd({
+    zoneid: 504722, containerid: 'crt-3', passbackcode: ezoflbf_3
+});
+</script><iframe id="cto_iframe_7d4d74ea94" frameborder="0" allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" scrolling="no" vspace="0" width="0px" height="0px" style="display:none;" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/saved_resource(1).html"></iframe></div><script type="text/javascript">setTimeout(function(){if(typeof IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL == 'object') {
+			var ezflaun = IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.GetNameFromPositionId(1104);
+				if(typeof ezflaun != 'undefined' && ezflaun.length > 0) {
+				if(typeof ez_ad_units != undefined) {
+					for(i=0;i<ez_ad_units.length;i++){
+
+						if(ezflaun.indexOf(ez_ad_units[i][1]) >= 0) {
+							return false;
+						}
+					}
+				}
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.StoreStatSource(ezflaun, 47, 3.00);
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.RemoveSlotById(ezflaun);
+			}
+
+		}}, 4000);</script><!--ezoicfl--> 
+    <!-- End Ezoic - AdTest_300x250(1) - sidebar -->
+   </div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Trên Eclipse chọn: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li><strong>File/New/Others..</strong></li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2563903.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2563925.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2563933.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li><strong>Group Id:</strong> org.o7planning</li> 
+     <li><strong>Artifact Id:</strong> SpringMVCAnnotationForm</li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2563942.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Project đã được tạo ra. 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2563966.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Sửa project: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564001.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Nhấn phải chuột vào Project chọn Properties.
+    <br> 
+    <br> Chọn Java Compiler 7 hoặc 8: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564100.png"> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564007"></a>4- Cấu hình Web.xml &amp; Maven </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564007"></div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Bạn cần phải sửa 
+    <strong>web.xml</strong> để sử dụng Servlet 3.x 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-xml"> 
+    <div class="df-file-name">
+     web.xml
+    </div> 
+    <pre class="brush: xml;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://java.sun.com/xml/ns/javaee"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+ id="WebApp_ID" version="3.0"&gt;
+
+ &lt;display-name&gt;Spring MVC Form&lt;/display-name&gt;
+ 
+
+&lt;/web-app&gt;
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Cấu hình Maven: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-xml"> 
+    <div class="df-file-name">
+     pom.xml
+    </div> 
+    <pre class="brush: xml;">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+  http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+ 
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;org.o7planning&lt;/groupId&gt;
+  &lt;artifactId&gt;SpringMVCAnnotationForm&lt;/artifactId&gt;
+  &lt;packaging&gt;war&lt;/packaging&gt;
+  &lt;version&gt;1.0.0&lt;/version&gt;
+  &lt;name&gt;SpringMVCAnnotationForm Maven Webapp&lt;/name&gt;
+  &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+
+
+  &lt;properties&gt;
+      &lt;java-version&gt;1.7&lt;/java-version&gt;
+  &lt;/properties&gt;
+
+  &lt;repositories&gt;
+      &lt;!-- Repository for ORACLE JDBC Driver --&gt;
+      &lt;repository&gt;
+          &lt;id&gt;codelds&lt;/id&gt;
+          &lt;url&gt;https://code.lds.org/nexus/content/groups/main-repo&lt;/url&gt;
+      &lt;/repository&gt;
+  &lt;/repositories&gt;
+
+  &lt;dependencies&gt;
+
+      &lt;dependency&gt;
+          &lt;groupId&gt;junit&lt;/groupId&gt;
+          &lt;artifactId&gt;junit&lt;/artifactId&gt;
+          &lt;version&gt;3.8.1&lt;/version&gt;
+          &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Servlet API --&gt;
+      &lt;!-- http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+          &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+          &lt;version&gt;3.1.0&lt;/version&gt;
+          &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Jstl for jsp page --&gt;
+      &lt;!-- http://mvnrepository.com/artifact/javax.servlet/jstl --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+          &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+          &lt;version&gt;1.2&lt;/version&gt;
+      &lt;/dependency&gt;
+
+
+      &lt;!-- JSP API --&gt;
+      &lt;!-- http://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;
+          &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;
+          &lt;version&gt;2.2&lt;/version&gt;
+          &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Spring dependencies --&gt;
+      &lt;!-- http://mvnrepository.com/artifact/org.springframework/spring-core --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+          &lt;version&gt;4.2.5.RELEASE&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- http://mvnrepository.com/artifact/org.springframework/spring-web --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+          &lt;version&gt;4.2.5.RELEASE&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- http://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+          &lt;version&gt;4.2.5.RELEASE&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- http://mvnrepository.com/artifact/org.springframework/spring-orm --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;
+          &lt;version&gt;4.2.5.RELEASE&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Hibernate --&gt;
+      &lt;!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-core --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+          &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+          &lt;version&gt;5.1.0.Final&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+          &lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;
+          &lt;version&gt;5.1.0.Final&lt;/version&gt;
+      &lt;/dependency&gt;
+
+
+      &lt;!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+          &lt;artifactId&gt;hibernate-c3p0&lt;/artifactId&gt;
+          &lt;version&gt;5.1.0.Final&lt;/version&gt;
+      &lt;/dependency&gt;
+
+
+      &lt;!-- MySQL JDBC driver --&gt;
+      &lt;!-- http://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;mysql&lt;/groupId&gt;
+          &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+          &lt;version&gt;5.1.34&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Oracle JDBC driver --&gt;
+      &lt;dependency&gt;
+          &lt;groupId&gt;com.oracle&lt;/groupId&gt;
+          &lt;artifactId&gt;ojdbc6&lt;/artifactId&gt;
+          &lt;version&gt;11.2.0.3&lt;/version&gt;
+      &lt;/dependency&gt;
+
+    &lt;!-- SQLServer JDBC driver (JTDS) --&gt;
+    &lt;!-- http://mvnrepository.com/artifact/net.sourceforge.jtds/jtds --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;net.sourceforge.jtds&lt;/groupId&gt;
+        &lt;artifactId&gt;jtds&lt;/artifactId&gt;
+        &lt;version&gt;1.3.1&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- Email validator,... --&gt;
+    &lt;!-- http://mvnrepository.com/artifact/commons-validator/commons-validator --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;commons-validator&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-validator&lt;/artifactId&gt;
+        &lt;version&gt;1.5.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+
+  &lt;build&gt;
+      &lt;finalName&gt;SpringMVCAnnotationForm&lt;/finalName&gt;
+      &lt;plugins&gt;
+    
+          &lt;!-- Config: Maven Tomcat Plugin --&gt;
+          &lt;!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin --&gt;
+          &lt;plugin&gt;
+              &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+              &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+              &lt;version&gt;2.2&lt;/version&gt;
+              &lt;!-- Config: contextPath and Port (Default - /SpringMVCAnnotationForm : 8080) --&gt;
+              &lt;!--
+              &lt;configuration&gt;
+                  &lt;path&gt;/&lt;/path&gt;
+                  &lt;port&gt;8899&lt;/port&gt;
+              &lt;/configuration&gt;
+              --&gt;   
+          &lt;/plugin&gt;
+      &lt;/plugins&gt;
+  &lt;/build&gt;   
+ 
+
+&lt;/project&gt;
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564073"></a>5- Cấu hình Spring MVC </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564073">
+    <div style="overflow:hidden"> 
+     <!-- Ezoic - Long-Content-3 - long_content --> 
+     <span id="ezoic-pub-ad-placeholder-109"></span><span style="display: inline-block; float: none; min-height: 90px; min-width: 728px; margin: 2px 0px !important;" class="ezoic-ad leader-1 adtester-container adtester-container-109"><span id="div-gpt-ad-o7planning_org-leader-1-0" ezaw="728" ezah="90" style="position: relative; z-index: 0; min-height: 90px; min-width: 728px;" class="ezoic-ad ezfound" data-google-query-id="CMrZ5Zjwl9ECFQEkjgodSFkGYg"><div id="google_ads_iframe_/1254144/o7planning_org-leader-1_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/container(2).html" id="google_ads_iframe_/1254144/o7planning_org-leader-1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></span></span> 
+     <!-- End Ezoic - Long-Content-3 - long_content --> 
+    </div>
+   </div> 
+  </dt> 
+  <dd> 
+   <blockquote> 
+    <div class="df-fragment df-cktext-default"> 
+     <strong>SpringWebAppInitializer</strong> sử dụng để khởi tạo các cấu hình Spring, nó là điểm bắt đầu của Spring MVC. Nó thay thế cho việc cấu hình Spring MVC trong 
+     <strong>web.xml</strong>. 
+    </div> 
+    <div class="df-fragment df-text-xml"> 
+     <div class="df-file-name">
+      ** web.xml **
+     </div> 
+     <pre class="brush: xml;">&lt;!-- Với SpringWebAppInitializer, bạn không cần cấu hình trong web.xml --&gt;
+
+ &lt;servlet&gt;
+     &lt;servlet-name&gt;spring-mvc&lt;/servlet-name&gt;
+     &lt;servlet-class&gt;
+         org.springframework.web.servlet.DispatcherServlet
+     &lt;/servlet-class&gt;
+     &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+ &lt;/servlet&gt;  
+
+ &lt;servlet-mapping&gt;
+     &lt;servlet-name&gt;spring-mvc&lt;/servlet-name&gt;
+     &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+ &lt;/servlet-mapping&gt;
+</pre> 
+    </div> 
+   </blockquote> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564238.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     SpringWebAppInitializer.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.config;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
+
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
+
+public class SpringWebAppInitializer implements WebApplicationInitializer {
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
+        appContext.register(ApplicationContextConfig.class);
+
+        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("SpringDispatcher",
+                new DispatcherServlet(appContext));
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("/");
+    }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Class 
+    <strong>ApplicationContextConfig</strong> sử dụng để cấu hình Spring MVC Context, bao gồm: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li>View Resolver</li> 
+     <li>Datasouce</li> 
+     <li>Hiberante (Hibernate Transaction Manager, Hibernate Session,..)</li> 
+     <li>DAO</li> 
+     <li>Bean</li> 
+     <li>....</li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     ApplicationContextConfig.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.config;
+
+import java.util.Properties;
+
+import javax.sql.DataSource;
+
+import org.hibernate.SessionFactory;
+import org.o7planning.springmvcforms.dao.ApplicantDAO;
+import org.o7planning.springmvcforms.dao.impl.ApplicantDAOImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+@Configuration
+@ComponentScan("org.o7planning.springmvcforms.*")
+@EnableTransactionManagement
+// Load to Environment.
+@PropertySource("classpath:ds-hibernate-cfg.properties")
+public class ApplicationContextConfig {
+
+
+
+  // Lưu trữ các giá thuộc tính load bởi @PropertySource.
+  @Autowired
+  private Environment env;
+ 
+ 
+
+  @Bean
+  public ResourceBundleMessageSource messageSource() {
+      ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
+      // Load property in message/validator.properties
+      rb.setBasenames(new String[] { "messages/validator"});
+      return rb;
+  }
+ 
+
+  @Bean(name = "viewResolver")
+  public InternalResourceViewResolver getViewResolver() {
+      InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+      viewResolver.setPrefix("/WEB-INF/pages/");
+      viewResolver.setSuffix(".jsp");
+      return viewResolver;
+  }
+
+  @Bean(name = "dataSource")
+  public DataSource getDataSource() {
+      DriverManagerDataSource dataSource = new DriverManagerDataSource();
+
+      dataSource.setDriverClassName(env.getProperty("ds.database-driver"));
+      dataSource.setUrl(env.getProperty("ds.url"));
+      dataSource.setUsername(env.getProperty("ds.username"));
+      dataSource.setPassword(env.getProperty("ds.password"));
+
+      return dataSource;
+  }
+
+  @Autowired
+  @Bean(name = "sessionFactory")
+  public SessionFactory getSessionFactory(DataSource dataSource) throws Exception {
+      Properties properties = new Properties();
+
+      // Xem: ds-hibernate-cfg.properties
+      properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
+      properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+      properties.put("current_session_context_class", env.getProperty("current_session_context_class"));
+     
+
+      LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
+      factoryBean.setPackagesToScan(new String[] { "org.o7planning.springmvcforms.entity" });
+      factoryBean.setDataSource(dataSource);
+      factoryBean.setHibernateProperties(properties);
+      factoryBean.afterPropertiesSet();
+      //
+      SessionFactory sf = factoryBean.getObject();
+      return sf;
+  }
+
+  @Autowired
+  @Bean(name = "transactionManager")
+  public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
+      HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
+
+      return transactionManager;
+  }
+
+  @Bean(name = "applicantDAO")
+  public ApplicantDAO getApplicantDAO() {
+      return new ApplicantDAOImpl();
+  }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <strong>ApplicationContextConfig</strong>&nbsp; sẽ đọc các thông tin cấu hình Datasource, Hibernate properties trong file 
+    <strong>ds-hibernate-cfg.properties</strong>. 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564313.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Các cấu hình dành cho Oracle, MySQL hoặc SQL Server: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-text"> 
+    <div class="df-file-name">
+     ds-hibernate-cfg.properties (For ORACLE)
+    </div> 
+    <pre class="brush: plain;">
+# DataSource
+
+ds.database-driver=oracle.jdbc.driver.OracleDriver
+ds.url=jdbc:oracle:thin:@localhost:1521:db12c
+ds.username=shoppingcart
+ds.password=12345
+
+
+# Hibernate Config
+
+hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+hibernate.show_sql=true
+current_session_context_class=thread
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-text"> 
+    <div class="df-file-name">
+     ds-hibernate-cfg.properties (For MYSQL)
+    </div> 
+    <pre class="brush: plain;">
+# DataSource
+
+ds.database-driver=com.mysql.jdbc.Driver
+ds.url=jdbc:mysql://localhost:3306/mydatabase
+ds.username=root
+ds.password=12345
+
+
+# Hibernate Config
+
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+hibernate.show_sql=true
+current_session_context_class=thread
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-text"> 
+    <div class="df-file-name">
+     ds-hibernate-cfg.properties (For SQL SERVER)
+    </div> 
+    <pre class="brush: plain;">
+# DataSource
+
+ds.database-driver=net.sourceforge.jtds.jdbc.Driver
+ds.url=jdbc:jtds:sqlserver://localhost:1433/simplehr;instance=SQLEXPRESS
+ds.username=shoppingcart
+ds.password=12345
+
+
+# Hibernate Config
+
+hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+hibernate.show_sql=true
+current_session_context_class=thread
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Cấu hình để sử dụng các nguồn tĩnh (html, image, css,..) 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     WebMvcConfig.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+
+@Configuration
+@EnableWebMvc
+public class WebMvcConfig extends WebMvcConfigurerAdapter {
+
+ 
+ 
+   // Cấu hình để sử dụng các file nguồn tĩnh (html, image, ..)
+   // Tương đương với &lt;mvc:resources/&gt; trong cấu hình sử dụng XML.
+   @Override
+   public void addResourceHandlers(ResourceHandlerRegistry registry) {
+       registry.addResourceHandler("/css/**").addResourceLocations("/css/").setCachePeriod(31556926);
+       registry.addResourceHandler("/img/**").addResourceLocations("/img/").setCachePeriod(31556926);
+       registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(31556926);
+   }
+
+   // equivalent for &lt;mvc:default-servlet-handler/&gt; tag
+   @Override
+   public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+       configurer.enable();
+   }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564366"></a>6- Các file class tham gia vào ví dụ </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564366">
+    <!-- Ezoic - Row1 - native_mid --> 
+    <span id="ezoic-pub-ad-placeholder-106"></span><span style="display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:240px;min-width:100%;" class="ezoic-ad nativesingle-1 adtester-container adtester-container-106"><div id="ob_holder" style="display: none;"><iframe id="ob_iframe" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/obFrame.html" style="display: none; width: 1px; height: 1px;"></iframe><script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/widgetGlobalEvent" charset="UTF-8" async=""></script></div><div class="OUTBRAIN" data-src="http://outbrain.ezoic.net/?variant=22529_1_106_100x240" data-widget-id="AR_4" data-ob-template="ezoic" data-ob-mark="true" data-browser="chrome" data-os="win32" data-dynload="" data-idx="0" id="outbrain_widget_0"><div class="ob-widget ob-strip-layout AR_4 ezfound">
+      <span style="position:fixed;top:-200px;">&nbsp;</span>
+    <style type="text/css">
+      /* dynamic basic css */
+.AR_4.ob-widget .ob-widget-items-container {margin:0;padding:0;}
+.AR_4.ob-widget .ob-widget-items-container .ob-clearfix {display:block;width:100%;float:none;clear:both;height:0px;line-height:0px;font-size:0px;}
+.AR_4.ob-widget .ob-widget-items-container.ob-multi-row {padding-top: 2%;}
+.AR_4.ob-widget .ob-dynamic-rec-container {position:relative;margin:0;padding;0;}
+.AR_4.ob-widget .ob-dynamic-rec-link,
+.AR_4.ob-widget .ob-dynamic-rec-link:hover {text-decoration:none;}
+.AR_4.ob-widget .ob-rec-image-container .ob-video-icon-container {position:absolute;left:0;height:50%;width:100%;text-align:center;top:25%;}
+.AR_4.ob-widget .ob-rec-image-container .ob-video-icon {display:inline-block;height:100%;float:none;opacity:0.7;transition: opacity 500ms;}
+.AR_4.ob-widget .ob-rec-image-container .ob-video-icon:hover {opacity:1;}
+.AR_4.ob-widget .ob_what{direction:ltr;clear:both;padding:5px 10px 0px;}
+.AR_4.ob-widget .ob_what a{color:#999;font-size:11px;font-family:arial;text-decoration: none;}
+.AR_4.ob-widget .ob_what.ob-hover:hover a{text-decoration: underline;}
+.AR_4.ob-widget .ob_amelia,
+.AR_4.ob-widget .ob_logo,
+.AR_4.ob-widget .ob_text_logo{vertical-align:baseline !important;display:inline-block;vertical-align:text-bottom;padding:0px 5px;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
+.AR_4.ob-widget .ob_amelia{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16.png') no-repeat center top;width:16px;height:16px;margin-bottom:-2px;}
+.AR_4.ob-widget .ob_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_67x12.png') no-repeat center top;width:67px;height:12px;}
+.AR_4.ob-widget .ob_text_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_text_logo_67x22.png') no-repeat center top;width:67px;height:22px;}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+.AR_4.ob-widget .ob_amelia{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16@2x.png') no-repeat center top;width:16px;height:16px;margin-bottom:-2px; background-size:16px 32px;}
+.AR_4.ob-widget .ob_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_logo_67x12@2x.png') no-repeat center top;width:67px;height:12px; background-size:67px 24px;}
+.AR_4.ob-widget .ob_text_logo{background:url('http://widgets.outbrain.com/images/widgetIcons/ob_text_logo_67x22@2x.png') no-repeat center top;width:67px;height:20px; background-size:67px 40px;}
+}
+.AR_4.ob-widget:hover .ob_amelia,
+.AR_4.ob-widget:hover .ob_logo,
+.AR_4.ob-widget:hover .ob_text_logo{background-position:center bottom;}
+  .AR_4.ob-widget .ob_what{text-align:right;}
+.AR_4.ob-widget .ob-rec-image-container .ob-rec-image {display:block;}
+      /* dynamic strip css */
+.AR_4.ob-widget .ob-rec-image-container {position:relative;}
+.AR_4.ob-widget .ob-rec-image-container .ob-image-ratio {height:0px;line-height:0px;padding-top:75.0%;}
+.AR_4.ob-widget .ob-rec-image-container img.ob-rec-image {width:100%;position:absolute;top:0;bottom:0;left:0;right:0;opacity:0;transition:all 750ms;}
+.AR_4.ob-widget .ob-rec-image-container img.ob-show {opacity:1;}
+.AR_4.ob-widget .ob-rec-image-container .ob-rec-label {position:absolute;bottom:0px;left:0px;padding:0px 3px;background-color:#666;color:white;font-size:10px;line-height:15px;}
+.AR_4.ob-widget {width:auto;min-width:60px;}
+.AR_4.ob-widget .ob-dynamic-rec-container {display:inline-block;vertical-align:top;min-width:50px;width:31.8%;box-sizing:border-box;-moz-box-sizing:border-box;}
+.AR_4.ob-widget .ob-unit.ob-rec-brandName,
+.AR_4.ob-widget .ob-unit.ob-rec-brandLogo-container,
+.AR_4.ob-widget .ob-rec-brandLogoAndName {display:inline-block;}
+.AR_4.ob-widget .ob-rec-brandLogo {width:auto;height:auto;}
+.AR_4.ob-widget .ob-rec-brandName {vertical-align:bottom;}
+.AR_4.ob-widget .ob-unit.ob-rec-brandName {vertical-align:super;}
+  .AR_4.ob-widget .ob-widget-items-container {direction: ltr;}
+  .AR_4.ob-widget .ob-dynamic-rec-container {margin-left:0;}
+  .AR_4.ob-widget .ob-dynamic-rec-container ~ .ob-dynamic-rec-container {margin:0 0 0 2.3%; }
+.AR_4.ob-widget .ob-widget-header {direction:ltr; font-weight:bold;}
+.AR_4.ob-widget .ob-unit {display:block;}
+.AR_4.ob-widget .ob-rec-text {max-height:49.0px;overflow:hidden;font-weight:bold;}
+.AR_4.ob-widget .ob-rec-source {}
+.AR_4.ob-widget .ob-rec-date {font-weight:bold;}
+
+
+
+
+
+      /* dynamic customized css */
+      
+.AR_4.ob-strip-layout .ob-widget-header {font-family:inherit;font-size:18px;color:black;padding-bottom:12px;padding-top:0px;}
+.AR_4.ob-strip-layout .ob-dynamic-rec-container {max-width:300px;}
+.AR_4.ob-strip-layout .ob-rec-text {font-family:inherit;color:black;padding:5px 0 0px;text-align:left;line-height:1.25;font-size:13px;}
+.AR_4.ob-strip-layout .ob-rec-text:hover {color:black;}
+.AR_4.ob-strip-layout .ob-rec-source {font-family:inherit;color:#888;padding:0px 0 0px;text-align:left;font-size:13px;}
+.AR_4.ob-strip-layout .ob-rec-date {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
+.AR_4.ob-strip-layout .ob-rec-author {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
+.AR_4.ob-strip-layout .ob-rec-description {font-family:inherit;color:black;padding:0px 0 0px;text-align:left;font-size:12px;}
+.AR_4.ob-strip-layout .ob-rec-brandName {font-family:inherit;padding:5px 0 0px;line-height:1.25;font-size:13px;font-weight:400;}
+.AR_4.ob-strip-layout .ob-rec-brandLogo {width:20px;height:20px;}
+    </style>
+    <style type="text/css" class="ob-custom-css">
+      .AR_4.ob-widget .ob-widget-header {
+  text-align: left !IMPORTANT;
+}
+
+  @media (min-width: 1px) and (max-width: 450px){
+  .AR_4.ob-widget .ob-dynamic-rec-container {
+  min-width: 50px;
+  width: 100%;
+  }
+
+
+  .AR_4.ob-widget .ob-dynamic-rec-container ~ .ob-dynamic-rec-container {
+  margin: 0 0 0 0;
+  
+  }
+    </style>
+        <div class="ob-widget-section ob-first">
+            <div class="ob-widget-header">Sponsored Content</div>
+            <ul class="ob-widget-items-container"><li class="ob-dynamic-rec-container ob-recIdx-0 ob-p" data-pos="0"><a class="ob-dynamic-rec-link" onclick="" href="http://basketball-players.pointafter.com/stories/4328/repick-2005-nba-draft-chris-paul?utm_medium=cm&amp;utm_source=outbrain&amp;utm_campaign=i3.cm.ob.dt.4328" onmousedown="this.href=&#39;http://paid.outbrain.com/network/redir?p=rtEZQetCIyD4zts5rrWZb7OhvXgwyki9YkJ9XEdF89bvkZbt45ssqwlk7a34MiJLRJLoDEyueOoJOpPFnJfTNbxvAPXbdyInIVALleo17GW_wsCuMKhQ_7AgQ_wNhwqKqybWCjdKzopQl0YTgRYRm46zFJ5kYcoWKBtkWNhG8s8zV0BXUTUYwi_KkBxKQrmx_GC2ElWm0GWx2iV9FEG40pM9nuEFNsmx-haG4z8oX6Wnh0h-LV97JAlhSghovv1FJHP_rloy8U_XhrlGkc_fml5P7dEON_ReelGhZW6J6_pHDhiDGdEGv0GggwnBiTZMlhB1gaKd_4ZbeUOB___huiUfWfogpS20D3bQ1LCMsCgO8V0RZ5WrXZ2L-RnN_Ew1wKKtiMuzQzMLLyvHZUipZDWQQ6SKBHyXZ-iXAlKKAqL-WOmXFu23lhgC02_C3Ha_bZGn_iOkmMGyOD6nrFrU-22cKChJPJB9bYOcgpCj16GxECgzjWmaUkELx79B7knf2pzOJTEJVGTPIKIlcEfjRFRqKshf_NjKmeOFbU52iZgNdtOqxL5Wkl-D93DHTfUDqjQe2AZQbSXvA88vy14mNBZpKMVnio60CkzZDvFHPFX8-6hFsjmQ_Ua-bnlktyL_X_tZwVdMJ30yWnfKll1GRtd_DFretSfoxlz8bUIuFjt1xc5bqgSlFg8ZGG4TjNuj&amp;c=addbb7ae&amp;v=3&#39;; " target="_blank" rel="nofollow">
+
+      <span class="ob-unit ob-rec-image-container" data-type="Image">
+  <div class="ob-image-ratio"></div>
+    <img class="ob-rec-image ob-show" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/225" onload="this.className+=&#39; ob-show&#39;" alt="Let&#39;s Re-Pick the Horrendous 2005 NBA Draft" title="Let&#39;s Re-Pick the Horrendous 2005 NBA Draft" onerror="OBR.extern.imageError(this)">
+          </span>
+      <span class="ob-unit ob-rec-text" data-type="Title" title="Let&#39;s Re-Pick the Horrendous 2005 NBA Draft">Let's Re-Pick the Horrendous 2005 NBA Draft</span>      <span class="ob-unit ob-rec-source" data-type="Source">PointAfter | By Graphiq</span>
+
+        </a>
+    </li></ul>
+    </div>
+                    <div class="ob_what ob-hover">
+			<a href="http://www.outbrain.com/what-is/default/en" rel="nofollow" onclick="OBR.extern.callWhatIs(&#39;http://www.outbrain.com/what-is/default/en&#39;,&#39;&#39;,-1,-1,true ,null);return false">
+  		Recommended by<span class="ob_logo" title="Outbrain - content marketing"></span>
+  	</a>
+	</div>
+      </div></div>
+<script type="text/javascript" async="async" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/outbrain.js.download"></script></span> 
+    <!-- End Ezoic - Row1 - native_mid -->
+   </div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <strong>Applicant</strong> là một entity class, mô phỏng bảng APPLICANTS trong database 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     Applicant.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Applicants")
+public class Applicant implements Serializable {
+
+   private static final long serialVersionUID = -7893237204476214050L;
+   private String id;
+   private String name;
+   private String email;
+
+   private String position;
+   private String gender;
+   private String skills;
+
+   @Id
+   @Column(name = "ID", length = 50, nullable = false)
+   public String getId() {
+       return id;
+   }
+
+   public void setId(String id) {
+       this.id = id;
+   }
+
+   @Column(name = "Name", length = 50, nullable = false)
+   public String getName() {
+       return name;
+   }
+
+   public void setName(String name) {
+       this.name = name;
+   }
+
+   @Column(name = "Position", length = 50, nullable = false)
+   public String getPosition() {
+       return position;
+   }
+
+   public void setPosition(String position) {
+       this.position = position;
+   }
+
+   @Column(name = "Gender", length = 10, nullable = false)
+   public String getGender() {
+       return gender;
+   }
+
+   public void setGender(String gender) {
+       this.gender = gender;
+   }
+
+   @Column(name = "Email", length = 50, nullable = false)
+   public String getEmail() {
+       return email;
+   }
+
+   public void setEmail(String email) {
+       this.email = email;
+   }
+
+   @Column(name = "Skills", length = 255, nullable = false)
+   public String getSkills() {
+       return skills;
+   }
+
+   public void setSkills(String skills) {
+       this.skills = skills;
+   }
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     ApplicantInfo.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.model;
+
+public class ApplicantInfo {
+
+   private String id;
+   private String name;
+   private String email;
+
+   private String position;
+   private String gender;
+   private String skillsString;
+   private String[] skills;
+
+   public ApplicantInfo() {
+
+   }
+
+ 
+   // Không được thay đổi Constructor này,
+   // Nó được sử dụng trong Hibernate Query.
+   public ApplicantInfo(String id, String name, String email, String gender, String position, String skillsString) {
+       this.id = id;
+       this.name = name;
+       this.email = email;
+
+       this.position = position;
+       this.gender = gender;
+       this.skillsString = skillsString;
+       this.skills = toArray(skillsString);
+   }
+
+   private String[] toArray(String skillStrings) {
+       if (skillStrings == null) {
+           return new String[0];
+       }
+       String[] ret = skillStrings.split(",");
+       return ret;
+   }
+
+   public String getId() {
+       return id;
+   }
+
+   public void setId(String id) {
+       this.id = id;
+   }
+
+   public String getName() {
+       return name;
+   }
+
+   public void setName(String name) {
+       this.name = name;
+   }
+
+   public String getEmail() {
+       return email;
+   }
+
+   public void setEmail(String email) {
+       this.email = email;
+   }
+
+   public String getPosition() {
+       return position;
+   }
+
+   public void setPosition(String position) {
+       this.position = position;
+   }
+
+   public String getGender() {
+       return gender;
+   }
+
+   public void setGender(String gender) {
+       this.gender = gender;
+   }
+
+   public String[] getSkills() {
+       return skills;
+   }
+
+   public void setSkills(String[] skills) {
+       this.skills = skills;
+       this.skillsString = this.joinString(skills);
+   }
+
+   private String joinString(String[] skills) {
+       if (skills == null) {
+           return "";
+       }
+       return String.join(",", skills);
+   }
+
+   public String getSkillsString() {
+       return this.skillsString;
+   }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <strong>ApplicantDAO</strong> là một Spring Bean, để sử lý các insert, update, query dữ liệu trên bảng APPLICANTS. 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     ApplicantDAO.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.dao;
+
+import java.util.List;
+
+import org.o7planning.springmvcforms.entity.Applicant;
+import org.o7planning.springmvcforms.model.ApplicantInfo;
+
+public interface ApplicantDAO {
+
+    public Applicant findApplicant(String id);
+
+    public List&lt;ApplicantInfo&gt; listApplicantInfos();
+
+    public void saveApplicant(ApplicantInfo applicantInfo);
+
+    public ApplicantInfo findApplicantInfo(String id);
+
+    public void deleteApplicant(String id);
+   
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     ApplicantDAOImpl.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.dao.impl;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+import org.o7planning.springmvcforms.dao.ApplicantDAO;
+import org.o7planning.springmvcforms.entity.Applicant;
+import org.o7planning.springmvcforms.model.ApplicantInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ApplicantDAOImpl implements ApplicantDAO {
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    @Override
+    public Applicant findApplicant(String id) {
+        Session session = sessionFactory.getCurrentSession();
+        Criteria crit = session.createCriteria(Applicant.class);
+        crit.add(Restrictions.eq("id", id));
+        return (Applicant) crit.uniqueResult();
+    }
+
+    @Override
+    public ApplicantInfo findApplicantInfo(String id) {
+        Applicant applicant = this.findApplicant(id);
+        if (applicant == null) {
+            return null;
+        }
+        return new ApplicantInfo(applicant.getId(), applicant.getName(), //
+                applicant.getEmail(), applicant.getGender(), //
+                applicant.getPosition(), applicant.getSkills());
+    }
+
+    @Override
+    public List&lt;ApplicantInfo&gt; listApplicantInfos() {
+        String sql = "Select new " + ApplicantInfo.class.getName()//
+                + "(a.id, a.name, a.email, a.gender, a.position, a.skills) "//
+                + " from " + Applicant.class.getName() + " a ";
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery(sql);
+        return query.list();
+    }
+
+    public void saveApplicant(ApplicantInfo applicantInfo) {
+        String id = applicantInfo.getId();
+        Applicant applicant = null;
+        if (id != null) {
+            applicant = this.findApplicant(id);
+        }
+        boolean isNew = false;
+        if (applicant == null) {
+            isNew = true;
+            applicant = new Applicant();
+            applicant.setId(UUID.randomUUID().toString());
+        }
+        applicant.setEmail(applicantInfo.getEmail());
+        applicant.setGender(applicantInfo.getGender());
+        applicant.setName(applicantInfo.getName());
+        applicant.setPosition(applicantInfo.getPosition());
+        String skillsString = applicantInfo.getSkillsString();
+
+        applicant.setSkills(skillsString);
+        //
+
+        if (isNew) {
+            Session session = this.sessionFactory.getCurrentSession();
+            session.persist(applicant);
+        }
+    }
+
+    @Override
+    public void deleteApplicant(String id) {
+        Applicant applicant = this.findApplicant(id);
+        if (applicant != null) {
+            this.sessionFactory.getCurrentSession().delete(applicant);
+        }
+    }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564459"></a>7- Spring MVC Validator </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564459">
+    <div style="overflow:hidden;"> 
+     <!-- Ezoic - LongContent1 - long_content --> 
+     <span id="ezoic-pub-ad-placeholder-112"></span> 
+     <!-- End Ezoic - LongContent1 - long_content --> 
+    </div>
+   </div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <strong>ApplicantValidator</strong> là class để validate dữ liệu người dùng nhập vào form. Trong trường hợp người dùng nhập sai, sẽ có các thông báo như hình minh họa dưới đây: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564497.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     ApplicantValidator.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.validator;
+
+import org.apache.commons.validator.routines.EmailValidator;
+import org.o7planning.springmvcforms.model.ApplicantInfo;
+import org.springframework.stereotype.Component;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+
+@Component
+public class ApplicantValidator implements Validator {
+ 
+   // common-validator library.
+   private EmailValidator emailValidator =   EmailValidator.getInstance();
+
+ 
+   // Các class được hỗ trợ Validate
+   @Override
+   public boolean supports(Class&lt;?&gt; clazz) {
+       return clazz == ApplicantInfo.class;
+   }
+
+   @Override
+   public void validate(Object target, Errors errors) {
+       ApplicantInfo applicantInfo = (ApplicantInfo) target;
+
+ 
+       // Kiểm tra các field của ApplicantInfo.
+       // (Xem thêm file property: messages/validator.property)
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "NotEmpty.applicantForm.name");
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty.applicantForm.email");
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "position", "NotEmpty.applicantForm.position");
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "gender", "NotEmpty.applicantForm.gender");
+     
+       if(!emailValidator.isValid(applicantInfo.getEmail())) {
+           // Error in email field.
+           // Lỗi trường email.
+           errors.rejectValue("email", "Pattern.applicantForm.email");
+       }
+     
+       if(applicantInfo.getSkills()== null || applicantInfo.getSkills().length==0 ) {
+           errors.rejectValue("skills", "Select.applicantForm.skills");
+       }
+   
+   }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Các lỗi thông báo được cấu hình trong file 
+    <strong>messages/validator.properties</strong>: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564554.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-text"> 
+    <div class="df-file-name">
+     messages/validator.properties
+    </div> 
+    <pre class="brush: plain;">NotEmpty.applicantForm.name=Name is required
+NotEmpty.applicantForm.email=Email is required
+NotEmpty.applicantForm.position=Position is required
+NotEmpty.applicantForm.gender=Gender is required
+
+Pattern.applicantForm.email=Email is not valid
+
+Select.applicantForm.skills=Must select at least one skill
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Nội dung của 
+    <strong>validator.properties</strong> đã được load bởi 
+    <strong>ApplicationContextConfig</strong>: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     ** ApplicationContextConfig.java **
+    </div> 
+    <pre class="brush: java;">// Load property in message/validator.properties
+
+@Bean
+public ResourceBundleMessageSource messageSource() {
+   ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
+   // Load property in message/validator.properties
+   rb.setBasenames(new String[] { "messages/validator"});
+   return rb;
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564452"></a>8- Spring Controller </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564452">
+    <div style="overflow:hidden;"> 
+     <!-- Ezoic - Long-Content2 - long_content --> 
+     <span id="ezoic-pub-ad-placeholder-111"></span> 
+     <!-- End Ezoic - Long-Content2 - long_content --> 
+    </div>
+   </div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-text-java"> 
+    <div class="df-file-name">
+     MyController.java
+    </div> 
+    <pre class="brush: java;">package org.o7planning.springmvcforms.controller;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.o7planning.springmvcforms.dao.ApplicantDAO;
+import org.o7planning.springmvcforms.model.ApplicantInfo;
+import org.o7planning.springmvcforms.validator.ApplicantValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+@Controller
+// Cần thiết cho Hibernate Transaction.
+@Transactional
+// Cần thiết để sử dụng RedirectAttributes
+@EnableWebMvc
+public class MyController {
+
+   @Autowired
+   private ApplicantDAO applicantDAO;
+
+   @Autowired
+   private ApplicantValidator applicantValidator;
+
+   @RequestMapping("/")
+   public String homePage(Model model) {
+
+       return applicantList(model);
+   }
+
+   @RequestMapping("/applicantList")
+   public String applicantList(Model model) {
+       List&lt;ApplicantInfo&gt; list = applicantDAO.listApplicantInfos();
+       model.addAttribute("applicantInfos", list);
+       return "applicantList";
+   }
+
+   private Map&lt;String, String&gt; dataForPositions() {
+       Map&lt;String, String&gt; positionMap = new LinkedHashMap&lt;String, String&gt;();
+       positionMap.put("Developer", "Developer");
+       positionMap.put("Leader", "Leader");
+       positionMap.put("Tester", "Tester");
+       return positionMap;
+   }
+
+   private List&lt;String&gt; dataForSkills() {
+       List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+       list.add("Java");
+       list.add("C/C++");
+       list.add("C#");
+       return list;
+   }
+
+   private String formApplicant(Model model, ApplicantInfo applicantInfo) {
+       model.addAttribute("applicantForm", applicantInfo);
+
+       Map&lt;String, String&gt; positionMap = this.dataForPositions();
+
+       model.addAttribute("positionMap", positionMap);
+
+       List&lt;String&gt; list = dataForSkills();
+       model.addAttribute("skills", list);
+
+       if (applicantInfo.getId() == null) {
+           model.addAttribute("formTitle", "Create Applicant");
+       } else {
+           model.addAttribute("formTitle", "Edit Applicant");
+       }
+
+       return "formApplicant";
+   }
+
+   @RequestMapping("/createApplicant")
+   public String createApplicant(Model model) {
+
+       ApplicantInfo applicantInfo = new ApplicantInfo();
+
+       return this.formApplicant(model, applicantInfo);
+   }
+
+   @RequestMapping("/editApplicant")
+   public String editApplicant(Model model, @RequestParam("id") String id) {
+       ApplicantInfo applicantInfo = null;
+       if (id != null) {
+           applicantInfo = this.applicantDAO.findApplicantInfo(id);
+       }
+       if (applicantInfo == null) {
+           return "redirect:/applicantList";
+       }
+
+       return this.formApplicant(model, applicantInfo);
+   }
+
+   @RequestMapping("/deleteApplicant")
+   public String deleteApplicant(Model model, @RequestParam("id") String id) {
+       if (id != null) {
+           this.applicantDAO.deleteApplicant(id);
+       }
+       return "redirect:/applicantList";
+   }
+
+   // Set a form validator
+   @InitBinder
+   protected void initBinder(WebDataBinder dataBinder) {
+  
+       // Form mục tiêu
+       Object target = dataBinder.getTarget();
+       if (target == null) {
+           return;
+       }
+       System.out.println("Target=" + target);
+
+       if (target.getClass() == ApplicantInfo.class) {
+           dataBinder.setValidator(applicantValidator);
+       }
+   }
+
+   // Save or update Applicant
+   // 1. @ModelAttribute bind form value
+   // 2. @Validated form validator
+   // 3. RedirectAttributes for flash value
+   @RequestMapping(value = "/saveApplicant", method = RequestMethod.POST)
+   public String saveApplicant(Model model, //
+           @ModelAttribute("applicantForm") @Validated ApplicantInfo applicantInfo, //
+           BindingResult result, //
+           final RedirectAttributes redirectAttributes) {
+
+       // Nếu validate có lỗi.
+       if (result.hasErrors()) {
+           return this.formApplicant(model, applicantInfo);
+       }
+
+       this.applicantDAO.saveApplicant(applicantInfo);
+
+       // Important!!: Need @EnableWebMvc
+       // Add message to flash scope
+       redirectAttributes.addFlashAttribute("message", "Save Applicant Successful");
+
+       return "redirect:/applicantList";
+
+   }
+
+}
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564612"></a>9- Các file Jsps </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564612"></div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564628.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-jsp"> 
+    <div class="df-file-name">
+     WEB-INF/pages/applicantList.jsp
+    </div> 
+    <pre class="brush: xml;">&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;Applicant List&lt;/title&gt;
+&lt;style&gt;
+   table  {
+       margin-top: 10px;
+       border: solid black 1px;
+   }
+   table  td {
+        padding: 5px;
+   }
+   .message  {
+        font-size:90%;
+        color:blue;
+        font-style:italic;
+        margin-top:30px;
+   }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+
+&lt;a href="${pageContext.request.contextPath}/createApplicant"&gt;Create Applicant&lt;/a&gt;
+
+&lt;br/&gt;
+
+
+&lt;table border="1"&gt;
+ &lt;tr&gt;
+   &lt;th&gt;Name&lt;/th&gt;
+   &lt;th&gt;Position&lt;/th&gt;
+   &lt;th&gt;Gender&lt;/th&gt;
+   &lt;th&gt;Email&lt;/th&gt;
+   &lt;th&gt;Skills&lt;/th&gt;
+   &lt;th&gt;Edit&lt;/th&gt;
+   &lt;th&gt;Delete&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;c:forEach items="${applicantInfos}" var="info"&gt;
+
+ &lt;tr&gt;
+   &lt;td&gt; ${info.name}  &lt;/td&gt;
+   &lt;td&gt; ${info.position}  &lt;/td&gt;
+   &lt;td&gt; ${info.gender} &lt;/td&gt;
+   &lt;td&gt; ${info.email} &lt;/td&gt;
+   &lt;td&gt; ${info.skillsString} &lt;/td&gt;
+   &lt;td&gt; &lt;a href="deleteApplicant?id=${info.id}"&gt;Delete&lt;/a&gt; &lt;/td&gt;
+   &lt;td&gt; &lt;a href="editApplicant?id=${info.id}"&gt;Edit&lt;/a&gt; &lt;/td&gt;
+ &lt;/tr&gt;    
+
+ &lt;/c:forEach&gt;
+&lt;/table&gt;
+&lt;c:if test="${not empty message}"&gt;
+ 
+   &lt;div class="message"&gt;${message}&lt;/div&gt;
+&lt;/c:if&gt;
+
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-text-jsp"> 
+    <div class="df-file-name">
+     WEB-INF/pages/formApplicant.jsp
+    </div> 
+    <pre class="brush: xml;">&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%&gt;
+
+&lt;%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%&gt;
+&lt;%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;Create Applicant&lt;/title&gt;
+&lt;style&gt;
+.error-message {
+   color: red;
+   font-size:90%;
+   font-style: italic;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+   &lt;h3&gt;${formTitle}&lt;/h3&gt;
+
+   &lt;form:form action="saveApplicant" method="POST"
+       modelAttribute="applicantForm"&gt;
+
+       &lt;form:hidden path="id" /&gt;
+
+       &lt;table&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Name&lt;/td&gt;
+               &lt;td&gt;&lt;form:input path="name" /&gt;&lt;/td&gt;
+               &lt;td&gt;&lt;form:errors path="name"
+                       class="error-message" /&gt;&lt;/td&gt;      
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Gender&lt;/td&gt;
+               &lt;td&gt;&lt;form:select path="gender"&gt;
+                       &lt;form:option value="" label="- Gender -" /&gt;
+                       &lt;form:option value="M" label="Male" /&gt;
+                       &lt;form:option value="F" label="Female" /&gt;
+                   &lt;/form:select&gt;&lt;/td&gt;
+               &lt;td&gt;&lt;form:errors path="gender" class="error-message" /&gt;&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Email&lt;/td&gt;
+               &lt;td&gt;&lt;form:input path="email" /&gt;&lt;/td&gt;
+               &lt;td&gt;&lt;form:errors path="email" class="error-message" /&gt;&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Position&lt;/td&gt;
+               &lt;td&gt;&lt;form:select path="position"&gt;
+                       &lt;form:options items="${positionMap}" /&gt;
+                   &lt;/form:select&gt;&lt;/td&gt;
+               &lt;td&gt;&lt;form:errors path="position" class="error-message" /&gt;&lt;/td&gt;
+           &lt;/tr&gt;
+
+           &lt;tr&gt;
+               &lt;td&gt;Skills&lt;/td&gt;
+               &lt;td&gt;&lt;c:forEach items="${skills}" var="skill"&gt;
+                       &lt;form:checkbox path="skills" value="${skill}" label="${skill}" /&gt;
+                   &lt;/c:forEach&gt;&lt;/td&gt;
+               &lt;td&gt;&lt;form:errors path="skills" class="error-message" /&gt;&lt;/td&gt;
+           &lt;/tr&gt;
+
+           &lt;tr&gt;
+               &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+               &lt;td&gt;&lt;input type="submit" value="Submit" /&gt;
+                  &lt;a href="${pageContext.request.contextPath}/applicantList"&gt;Cancel&lt;/a&gt;
+               &lt;/td&gt;
+               &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+           &lt;/tr&gt;
+       &lt;/table&gt;
+   &lt;/form:form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre> 
+   </div> 
+  </dd> 
+  <dt class="content-toc">
+   <h1><a name="a2564661"></a>10- Chạy ứng dụng </h1>
+   <div class="ct-place-holder" id="ct-place-holder-2564661">
+    <!-- Ezoic - All-1 - mid_content --> 
+    <span id="ezoic-pub-ad-placeholder-102"></span> 
+    <!-- End Ezoic - All-1 - mid_content -->
+   </div> 
+  </dt> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Nhấn phải chuột vào Project chọn: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li><strong>Run As/Run Applications:</strong></li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564692.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default">
+     Nhập vào: 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li><strong>Name:</strong> Spring MVC Form</li> 
+     <li><strong>Base directory:</strong> ${workspace_loc:/SpringMVCAnnotationForm}</li> 
+     <li><strong>Goals:</strong> tomcat7:run</li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564739.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-cktext-default"> 
+    <ul> 
+     <li><a href="http://localhost:8080/SpringMVCAnnotationForm/applicantList" target="_blank">http://localhost:8080/SpringMVCAnnotationForm/applicantList</a></li> 
+    </ul> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564828.png"> 
+   </div> 
+  </dd> 
+  <dd> 
+   <div class="df-fragment df-binary-image"> 
+    <img alt="" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/2564849.gif"> 
+   </div> 
+  </dd> 
+ </dl> 
+</div>
+</div>
+<!-- CENTER_OF_BODY (end) TemplateFragmentId=1321265 -->
+
+</div>
+<aside id="sidebar" role="complementary">
+  
+ <!-- RIGHT_OF_BODY (start) TemplateFragmentId=1320250 -->
+ <!-- RELATED_ITEMS : Disabled -->
+ <!-- RELATED_CATEGORIES : Disabled -->
+
+ <!-- RELATED_CATEGORIES_WITH_ITEMS (start) TemplateFragmentId=2403584 -->
+<div class="cat-entry">
+   <h4>Spring Framework</h4>
+      <ul>
+                  <li><a href="http://o7planning.org/vi/10127/huong-dan-lap-trinh-spring-cho-nguoi-moi-bat-dau">Hướng dẫn lập trình Spring cho người mới bắt đầu</a></li>
+                        <li><a href="http://o7planning.org/vi/10129/huong-dan-lap-trinh-spring-mvc-cho-nguoi-moi-bat-dau">Hướng dẫn lập trình Spring MVC cho người mới bắt đầu - Hello Spring 4 MVC</a></li>
+                        <li><a href="http://o7planning.org/vi/10249/cai-dat-spring-tool-suite-vao-eclipse">Cài đặt Spring Tool Suite vào Eclipse</a></li>
+                        <li><a href="http://o7planning.org/vi/10353/cau-hinh-cac-nguon-du-lieu-tinh-trong-spring-mvc">Cấu hình các nguồn dữ liệu tĩnh trong Spring MVC</a></li>
+                        <li><a href="http://o7planning.org/vi/11229/huong-dan-su-dung-spring-mvc-interceptor">Hướng dẫn sử dụng Spring MVC Interceptor</a></li>
+                        <li><a href="http://o7planning.org/vi/11227/tao-ung-dung-web-da-ngon-ngu-voi-spring-mvc">Tạo ứng dụng web đa ngôn ngữ với Spring MVC</a></li>
+                        <li><a href="http://o7planning.org/vi/10351/huong-dan-upload-download-file-voi-spring-mvc">Hướng dẫn Upload File với Spring MVC</a></li>
+                        <li><a href="http://o7planning.org/vi/10301/huong-dan-su-dung-spring-jdbc">Hướng dẫn sử dụng Spring JDBC</a></li>
+                        <li><a href="http://o7planning.org/vi/10305/ung-dung-java-web-login-don-gian-su-dung-spring-mvc-spring-security-va-spring-jdbc">Ứng dụng Java Web login đơn giản sử dụng Spring MVC, Spring Security và Spring JDBC</a></li>
+                        <li><a href="http://o7planning.org/vi/11281/huong-dan-su-dung-spring-mvc-security-voi-hibernate">Hướng dẫn sử dụng Spring MVC Security với Hibernate</a></li>
+                        <li><a href="http://o7planning.org/vi/10603/huong-dan-su-dung-spring-mvc-security-va-spring-jdbc">Hướng dẫn sử dụng Spring MVC Security và Spring JDBC (XML Config)</a></li>
+                        <li><a href="http://o7planning.org/vi/10649/dang-nhap-bang-mang-xa-hoi-trong-spring-mvc-voi-spring-social-security">Đăng nhập bằng mạng xã hội trong Spring MVC với Spring Social Security</a></li>
+                        <li><a href="http://o7planning.org/vi/10309/huong-dan-su-dung-spring-mvc-va-velocity">Hướng dẫn sử dụng Spring MVC và Velocity</a></li>
+                        <li><a href="http://o7planning.org/vi/11251/huong-dan-su-dung-spring-mvc-voi-freemarker">Hướng dẫn sử dụng Spring MVC với FreeMarker</a></li>
+                        <li><a href="http://o7planning.org/vi/10401/su-dung-template-trong-spring-mvc-voi-apache-tiles">Sử dụng Template trong Spring MVC với Apache Tiles</a></li>
+                        <li><a href="http://o7planning.org/vi/10311/huong-dan-su-dung-spring-mvc-va-spring-jdbc-transaction">Hướng dẫn sử dụng Spring MVC và Spring JDBC Transaction</a></li>
+                        <li><a href="http://o7planning.org/vi/10859/su-dung-nhieu-datasource-trong-spring-mvc">Sử dụng nhiều DataSource trong Spring MVC</a></li>
+                        <li><a href="http://o7planning.org/vi/10307/huong-dan-su-dung-spring-mvc-hibernate-va-spring-transaction-manager">Hướng dẫn sử dụng Spring MVC, Hibernate và Spring Transaction Manager</a></li>
+                        <li><a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate">Hướng dẫn sử dụng Spring MVC Form và Hibernate</a></li>
+                        <li><a href="http://o7planning.org/vi/11131/chay-cac-nhiem-vu-nen-theo-lich-trinh-trong-spring-mvc">Chạy các nhiệm vụ nền theo lịch trình trong Spring MVC</a></li>
+                        <li><a href="http://o7planning.org/vi/10605/tao-mot-ung-dung-java-web-ban-hang-su-dung-spring-mvc-va-hibernate">Tạo một ứng dụng Java Web bán hàng sử dụng Spring MVC và Hibernate</a></li>
+                        <li><a href="http://o7planning.org/vi/10865/vi-du-crud-don-gian-voi-spring-mvc-restful-web-service">Ví dụ CRUD đơn giản với Spring MVC RESTful Web Service</a></li>
+                        <li><a href="http://o7planning.org/vi/11245/trien-khai-ung-dung-spring-mvc-tren-oracle-weblogic-server">Triển khai ứng dụng Spring MVC trên Oracle WebLogic Server</a></li>
+                        <li><a href="http://o7planning.org/vi/11267/huong-dan-su-dung-spring-boot">Hướng dẫn sử dụng Spring Boot</a></li>
+               </ul>
+</div>
+ 
+<!-- RELATED_CATEGORIES_WITH_ITEMS (end) TemplateFragmentId=2403584 -->
+
+ <!-- ALL_DOCUMENT_BY_TOPIC : Disabled -->
+
+ <!-- NEWEST-DOCUMENTS (start) TemplateFragmentId=1321049 -->
+<div class="cat-entry" style="color:#006633;">
+   <h4>Tài liệu mới nhất</h4>
+   <ul>
+                  <li>
+         <a href="http://o7planning.org/vi/11291/huong-dan-su-dung-java-swt-rowlayout">
+         Hướng dẫn sử dụng Java SWT RowLayout
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/11191/huong-dan-su-dung-java-swt-toggle-button">
+         Hướng dẫn sử dụng Java SWT Toggle Button
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/11289/huong-dan-su-dung-java-swt-filllayout">
+         Hướng dẫn sử dụng Java SWT FillLayout
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/11281/huong-dan-su-dung-spring-mvc-security-voi-hibernate">
+         Hướng dẫn sử dụng Spring MVC Security với Hibernate
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/10713/huong-dan-cai-dat-va-cau-hinh-postgresql">
+         Hướng dẫn cài đặt và cấu hình PostGreSQL
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/10795/huong-dan-su-dung-bieu-thuc-chinh-quy-trong-csharp">
+         Hướng dẫn sử dụng biểu thức chính quy trong C#
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/11267/huong-dan-su-dung-spring-boot">
+         Hướng dẫn sử dụng Spring Boot
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/11263/huong-dan-su-dung-struts2-namespace">
+         Hướng dẫn sử dụng Struts2 Namespace
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/11259/doc-ghi-file-excel-trong-java-su-dung-apache-poi">
+         Đọc Ghi file excel trong Java sử dụng Apache POI
+         </a>
+      </li>
+                        <li>
+         <a href="http://o7planning.org/vi/10859/su-dung-nhieu-datasource-trong-spring-mvc">
+         Sử dụng nhiều DataSource trong Spring MVC
+         </a>
+      </li>
+                                                                                                                                                                                                                                                                                                                                                                                       </ul>
+</div>
+ 
+<!-- NEWEST-DOCUMENTS (end) TemplateFragmentId=1321049 -->
+
+
+ <!-- ADVERTISING (start) TemplateFragmentId=1320806 -->
+<div style="overflow:hidden;">
+<!-- Ezoic - Sidebar - sidebar -->
+<span id="ezoic-pub-ad-placeholder-108"></span><span style="display: inline-block; float: none; min-height: 250px; min-width: 300px; margin: 2px 0px !important;" class="ezoic-ad medrectangle-1 adtester-container adtester-container-108"><span id="div-gpt-ad-o7planning_org-medrectangle-1-0" ezaw="300" ezah="250" style="position: relative; z-index: 0; min-height: 250px; min-width: 300px;" class="ezoic-ad ezfound" data-google-query-id="CMrsypfwl9ECFVJmjgodcWkMDQ"><div id="google_ads_iframe_/1254144/o7planning_org-medrectangle-1_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/container(3).html" id="google_ads_iframe_/1254144/o7planning_org-medrectangle-1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></span></span>
+</div>
+<div style="overflow:hidden;">
+
+<!--
+<table>
+ <tr>
+   <td>
+   <script data-cfasync="false" type="text/javascript"
+        src="//www.eboundservices.com/ads/160x600_responsive.js"></script>
+   </td>
+    <td>
+   <script data-cfasync="false" type="text/javascript"
+        src="//www.eboundservices.com/ads/120x600_responsive.js"></script>
+   </td>
+ </tr>
+</table>
+-->
+
+</div>
+<!-- ADVERTISING (end) TemplateFragmentId=1320806 -->
+
+<!-- RIGHT_OF_BODY (end) TemplateFragmentId=1320250 -->
+
+</aside>
+<div style="clear:both;"></div>
+<!-- BODY (end) TemplateFragmentId=1320166 -->
+
+</div>
+<div style="clear:both;"></div>
+<div>
+<input type="hidden" name="IL_IN_ARTICLE">
+<input type="hidden" name="IL_IN_TAG" value="2">
+</div>
+</section>
+</div>
+<div id="footer-container">
+
+ <!-- FOOTER (start) TemplateFragmentId=1320796 -->
+<div id="footer" class="inner-wrapper">
+<div class="site">o7planning.org</div>
+<div class="statistics">
+ </div>
+</div>
+<!-- FOOTER (end) TemplateFragmentId=1320796 -->
+
+</div>
+<script>
+SyntaxHighlighter.all();
+</script>
+<!-- SHARE BUTTONS -->
+<div id="share-buttons">
+<a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#" class="csbuttons" data-type="facebook" data-count="true">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/fb.png" alt=""></a>
+<a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#" class="csbuttons" data-type="twitter" data-txt="Free jQuery Plugins" data-via="AcrowFR" data-count="true">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/tw.png" alt=""></a>
+<a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#" class="csbuttons" data-type="google" data-lang="en" data-count="true">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/gp.png" alt=""></a>
+<a href="http://o7planning.org/vi/10601/huong-dan-su-dung-spring-mvc-form-va-hibernate#" class="csbuttons" data-type="linkedin" data-count="true">
+<img src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/in.png" alt=""></a>
+</div>
+<script>
+$('.csbuttons').cSButtons({ total : "#total", "type": "facebook, twitter, google, linkedin"});
+</script>
+<div id="nav-controls">
+<a href="javascript:top.window.scrollTo(0,0)" title="Top">
+<img alt="Top" border="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/go-top.png"></a>
+<br>
+<a href="javascript:window.scrollTo(document.body.clientWidth,document.body.clientHeight/2)" title="Center">
+<img alt="Middle page" border="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/go-center.png"></a>
+<br>
+<a href="javascript:window.scrollTo(document.body.clientWidth,document.body.clientHeight)" title="Bottom">
+<img alt="Bottom" border="0" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/go-bottom.png"></a>
+</div>
+<div>
+
+</div>
+
+<!-- Ezoic - Anchor Ad - bottom_floating -->
+<div class="ezmob-footer ezoic-floating-bottom ezo_ad"><center><span id="ezoic-pub-ad-placeholder-103"></span><!-- placeholder 103 blocked.  Reason : no sizes --></center></div>
+<!-- End Ezoic - Anchor Ad - bottom_floating -->
+
+<script data-cfasync="false" type="text/javascript">
+
+if (typeof $ezJQuery == 'undefined') {
+    if (typeof jQuery == 'undefined') {
+        document.write('<scr'+'ipt type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></sc'+'ript>');
+    } else {
+        $ezJQuery = jQuery;
+    }
+}
+
+if (typeof $ezJQuery == 'undefined' && typeof jQuery != 'undefined') {
+    $ezJQuery = jQuery.noConflict(true);
+}
+
+if (typeof $ezJQuery != 'undefined') {
+    $ezJQuery("body").mousemove(function(e){
+      ez_last_activity_count = ez_tos_track_count;
+    });
+    $ezJQuery("body").keypress(function(e){
+      ez_last_activity_count = ez_tos_track_count;
+    });
+    $ezJQuery(window).scroll(function(e){
+      ez_last_activity_count = ez_tos_track_count;
+    });
+} else {
+    ez_last_activity_count = 8;
+}
+
+</script>
+<script type="text/javascript">
+var __ez_dims = (function() {
+	var setCookie = function( name, content, expiry ) {
+		return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'');
+	};
+	var ffid = 1;
+	var oh = window.screen.height;
+	var ow = window.screen.width;
+	var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+	var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+	var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+	var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+	setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+	setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+})();
+</script><script type="text/javascript" src="./Hướng dẫn sử dụng Spring MVC Form và Hibernate_files/tb.php"></script>
+<script>
+$ezJQuery(function() {
+    if (typeof run_body_onload == 'function') {
+        run_body_onload();
+    }
+    if (typeof ezoicJSPageLoad == 'function') {
+        ezoicJSPageLoad($ezJQuery);
+    }
+});
+</script>
+
+
+<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 167px; display: none; top: 37px; position: absolute; left: 920px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>
