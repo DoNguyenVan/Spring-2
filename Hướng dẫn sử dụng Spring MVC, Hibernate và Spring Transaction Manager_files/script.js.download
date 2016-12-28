@@ -1,0 +1,101 @@
+// @codekit-prepend "js/BannerUtils.min.js";
+
+//init
+function initAD() {
+	if (!EB.isInitialized()) {
+		EB.addEventListener(EBG.EventName.EB_INITIALIZED, startAd);
+	} else {
+		startAd();
+	}
+}
+function startAd() {
+	//default
+	var ad = getEl('overlay');
+	ad.addEventListener('click', clickthrough);
+
+	//init timeline
+	frame0();
+}
+
+//
+function frame0() {
+	TweenMax.set('.frame, .sprite, .mask', { opacity: 0 });
+	TweenMax.set('.frame', { opacity: 0 });
+	TweenMax.set('.frame-4', { opacity: 0 });
+	TweenMax.set('.logo', { opacity: 0 });
+	TweenMax.fromTo('#overlay', 0.5, { opacity: 1 }, { opacity: 0, onComplete: frame1 });
+	TweenMax.fromTo('#background, .frame-1', 0.5, { opacity: 0 }, { opacity: 1 });
+}
+
+function frame1() {
+	var delay = 0.5;
+	TweenMax.set('.logo', { x: 221, y: 14 });
+	TweenMax.set('.frame-1', { x: 215, y: -65, scale:0.7 });
+	TweenMax.fromTo('.logo', 0.5, { opacity: 0, scale: 3 }, { opacity: 1, scale: 1, ease: Power4.easeIn, delay: delay });
+	TweenMax.fromTo('.text-1', 0.5, { opacity: 1, scale: 0 }, { opacity: 1, scale: 1, ease: Power4.easeIn, delay: delay += 0.5, onComplete: function() {
+			TweenMax.set('.light-1', { opacity: 1});
+			TweenMax.set('.line, .line-mask', { opacity: 1, width: 0 });
+			TweenMax.fromTo('.light-1', 1, { rotation: 0 }, { rotation: 360, ease: Power0.easeNone, repeat: 4 });
+			TweenMax.fromTo('.line', 0.8, { width: 0 }, { width: 272, ease: Power0.easeNone });
+			TweenMax.fromTo('.line-mask', 0.8, { width: 0 }, { width: 272, delay: 0.2, ease: Power0.easeNone, onComplete: function() {
+					TweenMax.set('.light-2', { opacity: 1, scale: 0.5 });
+					TweenMax.fromTo('.light-2', 1, { rotation: 0 }, { rotation: 360, ease: Power0.easeNone, repeat: 2 });
+					frame2();
+				}
+			});
+		}
+	});
+}
+
+function frame2() {
+	var delay = 0.5;
+	TweenMax.set('.frame-2', { opacity: 1 });
+	TweenMax.fromTo('.frame-1', 0.6, { opacity: 1 }, { y: -150, opacity: 0, delay: delay, ease: Back.easeIn, onComplete: function() { TweenMax.set('.frame1', { x: 0 }); } });
+	TweenMax.fromTo('.logo', 0.6, { }, { x: 28, y: 14, scale:1, ease: Power4.easeIn, delay: delay });
+	TweenMax.fromTo('.text-2', 0.5, { opacity: 0, scale: 3 }, { opacity: 1, scale: 1, ease: Power4.easeIn, delay: delay += 0.5 });
+	TweenMax.fromTo('.girls-1', 0.6, { opacity: 0 }, {  opacity: 1, ease: Power0.easeNone, delay: delay,onComplete: frame3 });  
+}
+
+function frame3() {
+	var delay = 1;
+	TweenMax.fromTo('.frame-2', 0.5, { opacity: 1 }, { opacity: 0, delay: delay });
+	TweenMax.fromTo('.frame-3, .girls-2', 0.5, { opacity: 0 }, { opacity: 1, delay: delay });
+	TweenMax.fromTo('.text-3', 0.5, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, ease: Power4.easeIn, delay: delay += 0.2, onComplete: frame4 });  
+}
+
+function frame4() {
+	var delay = 1;
+	TweenMax.fromTo('.frame-3', 0.5, { opacity: 1 }, { opacity: 0, delay: delay });
+	TweenMax.fromTo('.frame-4, .pack', 0.5, { opacity: 0 }, { opacity: 1, delay: delay, onComplete: function() {
+		TweenMax.set('.light-3', { scale: 2 });
+		TweenMax.set('.light-4', { scale: 0.5 });
+		TweenMax.set('.light-5', { scale: 0.6 });
+		TweenMax.set('.light-6', { scale: 0.4 });
+		TweenMax.fromTo('.light-3, .light-4, .light-5, .light-6', 0.5, { opacity: 0 }, { opacity: 1});
+		TweenMax.staggerFromTo('.light-3, .light-4, .light-5, .light-6', 1.8, { rotation: 0 }, { rotation: 360, ease: Power0.easeNone, repeat: 2 }, 0.1);
+	} });
+	TweenMax.fromTo('.text-4', 0.5, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, ease: Power4.easeIn, delay: delay += 0.2 });
+	TweenMax.fromTo('.cta', 0.5, { opacity: 0, scale: 3 }, { opacity: 1, scale: 1, ease: Power4.easeIn, delay: delay += 0.2, onComplete: glow });
+}
+
+function glow() {
+	TweenMax.fromTo('.cta .glow', 1.2, { x: 0 }, { x: 280, ease: SlowMo.ease.config(0.4, 0.4, false), repeat: 1, repeatDelay: 0.4 });
+}
+
+//events handle
+function clickthrough() {
+	EB.clickthrough();
+}
+
+//replay
+function replay() {
+	setTimeout(function() { frame0(); }, 200);
+}
+
+//helper
+function getEl(id) {
+	return document.getElementById(id);
+}
+
+//run script
+window.onload = initAD;
